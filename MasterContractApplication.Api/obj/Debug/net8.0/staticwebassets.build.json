@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "LCE9MGY19CMQ7TE6zA9PKEpOvqCqhvN5lHpBpOYfhl8=",
+  "Source": "MasterContractApplication.Api",
+  "BasePath": "_content/MasterContractApplication.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

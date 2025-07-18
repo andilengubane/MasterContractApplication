@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MasterContractApplication.Application.DTOs
 {
-    public class UserDto
-    {
-    }
+    public record UserDto(int Id, string FisrtName, string LastName, string EmailAddress , string Password, string RegNumber, bool IsActived, int UserRole);
+    public record CeateUserDto(int Id, string FisrtName, string LastName, string EmailAddress, string Password, string RegNumber, bool IsActived, int UserRole);
+
+    public record UpdateUserDto(int Id, string FisrtName, string LastName, string EmailAddress, string Password, string RegNumber, bool IsActived, int UserRole);
 }

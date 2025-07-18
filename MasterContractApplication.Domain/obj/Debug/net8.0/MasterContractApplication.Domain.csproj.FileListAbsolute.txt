@@ -1,0 +1,12 @@
+C:\Git\MasterControlApplication\MasterContractApplication\MasterContractApplication.Domain\bin\Debug\net8.0\MasterContractApplication.Domain.deps.json
+C:\Git\MasterControlApplication\MasterContractApplication\MasterContractApplication.Domain\bin\Debug\net8.0\MasterContractApplication.Domain.dll
+C:\Git\MasterControlApplication\MasterContractApplication\MasterContractApplication.Domain\bin\Debug\net8.0\MasterContractApplication.Domain.pdb
+C:\Git\MasterControlApplication\MasterContractApplication\MasterContractApplication.Domain\obj\Debug\net8.0\MasterContractApplication.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\MasterControlApplication\MasterContractApplication\MasterContractApplication.Domain\obj\Debug\net8.0\MasterContractApplication.Domain.AssemblyInfoInputs.cache
+C:\Git\MasterControlApplication\MasterContractApplication\MasterContractApplication.Domain\obj\Debug\net8.0\MasterContractApplication.Domain.AssemblyInfo.cs
+C:\Git\MasterControlApplication\MasterContractApplication\MasterContractApplication.Domain\obj\Debug\net8.0\MasterContractApplication.Domain.csproj.CoreCompileInputs.cache
+C:\Git\MasterControlApplication\MasterContractApplication\MasterContractApplication.Domain\obj\Debug\net8.0\MasterContractApplication.Domain.sourcelink.json
+C:\Git\MasterControlApplication\MasterContractApplication\MasterContractApplication.Domain\obj\Debug\net8.0\MasterContractApplication.Domain.dll
+C:\Git\MasterControlApplication\MasterContractApplication\MasterContractApplication.Domain\obj\Debug\net8.0\refint\MasterContractApplication.Domain.dll
+C:\Git\MasterControlApplication\MasterContractApplication\MasterContractApplication.Domain\obj\Debug\net8.0\MasterContractApplication.Domain.pdb
+C:\Git\MasterControlApplication\MasterContractApplication\MasterContractApplication.Domain\obj\Debug\net8.0\ref\MasterContractApplication.Domain.dll

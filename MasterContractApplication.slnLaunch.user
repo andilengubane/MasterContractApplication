@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Name": "MasterContractApplication.Api\\MasterContractApplication.Api.csproj",
+        "Action": "Start",
+        "DebugTarget": ""
+      },
+      {
+        "Name": "MasterContractApplication.Portal\\MasterContractApplication.Portal\\MasterContractApplication.Portal.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

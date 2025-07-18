@@ -88,6 +88,29 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "MasterContractApplication.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MasterContractApplication.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MasterContractApplication.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MasterContractApplication.Application.dll": {}
+        }
+      },
+      "MasterContractApplication.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/MasterContractApplication.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MasterContractApplication.Domain.dll": {}
+        }
       }
     }
   },
@@ -420,10 +443,21 @@
         "swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "MasterContractApplication.Application/1.0.0": {
+      "type": "project",
+      "path": "../MasterContractApplication.Application/MasterContractApplication.Application.csproj",
+      "msbuildProject": "../MasterContractApplication.Application/MasterContractApplication.Application.csproj"
+    },
+    "MasterContractApplication.Domain/1.0.0": {
+      "type": "project",
+      "path": "../MasterContractApplication.Domain/MasterContractApplication.Domain.csproj",
+      "msbuildProject": "../MasterContractApplication.Domain/MasterContractApplication.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "MasterContractApplication.Application >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -462,7 +496,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Application\\MasterContractApplication.Application.csproj": {
+              "projectPath": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Application\\MasterContractApplication.Application.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
