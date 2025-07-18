@@ -8,5 +8,6 @@ namespace MasterContractApplication.Infrastructure
 {
     public class InfastructureDependencyRegister
     {
+
     }
 }
