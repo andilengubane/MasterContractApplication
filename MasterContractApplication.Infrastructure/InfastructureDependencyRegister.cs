@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MasterContractApplication.Infrastructure
 {
-    public class InfastructureDependencyRegister
+    public class InfastructureDependencyRegister 
     {
 
     }
