@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "d3u7WdthBWWd629rhlCxqHDvp2Rq41P2PSvMFZ3gJDje/0hI26ElpB9pWXE39p9cllfkqq6tRydJVGVd67gH2g==",
+  "success": true,
+  "projectFilePath": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Portal\\MasterContractApplication.Portal\\MasterContractApplication.Portal.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.server\\8.0.2\\microsoft.aspnetcore.components.webassembly.server.8.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
