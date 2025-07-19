@@ -1,27 +1,7 @@
 [
   {
     "ContainingType": "MasterContractApplication.Api.Controllers.UserController",
-    "Method": "GetAllUser",
-    "RelativePath": "api/User",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[MasterContractApplication.Application.DTOs.UserDto, MasterContractApplication.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "MasterContractApplication.Api.Controllers.UserController",
-    "Method": "CreateUser",
+    "Method": "AddUserAsync",
     "RelativePath": "api/User",
     "HttpMethod": "POST",
     "IsController": true,
@@ -29,113 +9,20 @@
     "Parameters": [
       {
         "Name": "user",
-        "Type": "MasterContractApplication.Application.DTOs.CeateUserDto",
+        "Type": "MasterContractApplication.Domain.Entities.User",
         "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "MasterContractApplication.Application.DTOs.UserDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "MasterContractApplication.Api.Controllers.UserController",
-    "Method": "GetUserById",
-    "RelativePath": "api/User/Id",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "MasterContractApplication.Application.DTOs.UserDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "MasterContractApplication.Api.Controllers.UserController",
-    "Method": "UpdateUser",
-    "RelativePath": "api/User/Id",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "updateUserDto",
-        "Type": "MasterContractApplication.Application.DTOs.UpdateUserDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "MasterContractApplication.Application.DTOs.UserDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "MasterContractApplication.Api.Controllers.UserController",
-    "Method": "DeleteUser",
-    "RelativePath": "api/User/Id",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Id",
-        "Type": "System.Int32",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MasterContractApplication.Api.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
+    "ContainingType": "MasterContractApplication.Api.Controllers.UserController",
+    "Method": "GetAllUserAsync",
+    "RelativePath": "api/User/user",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[MasterContractApplication.Api.WeatherForecast, MasterContractApplication.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   }
 ]

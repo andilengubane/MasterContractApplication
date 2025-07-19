@@ -1340,6 +1340,7 @@
       "MasterContractApplication.Application/1.0.0": {
         "dependencies": {
           "MasterContractApplication.Domain": "1.0.0",
+          "MediatR": "13.0.0",
           "Microsoft.Extensions.DependencyInjection": "10.0.0-preview.6.25358.103"
         },
         "runtime": {

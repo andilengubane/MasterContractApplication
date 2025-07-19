@@ -11,6 +11,7 @@ namespace MasterContractApplication.Application
     {
         public static IServiceCollection AddApplicationDI(this IServiceCollection services)
         {
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(ApplicationDepedancyRegister).Assembly));
             return services;        
         }
     }

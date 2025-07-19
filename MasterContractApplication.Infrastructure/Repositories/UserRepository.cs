@@ -1,50 +1,59 @@
 ﻿using MasterContractApplication.Domain.Entities;
+using MasterContractApplication.Domain.Interfaces;
 using MasterContractApplication.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MasterContractApplication.Infrastructure.Repositories
 {
-    public class UserRepository
+    public class UserRepositor (MasterContractApplicationContext _masterContractApplicationContext) : IUserRepository
     {
-        private readonly MasterContractApplicationContext _masterContractApplicationContext;
-        public UserRepository(MasterContractApplicationContext contractApplicationContext)
-        {
-           _masterContractApplicationContext = contractApplicationContext;  
-        }
-
-        public async Task<User> GetByIdAsync(int userId)
-        {
-            return await _masterContractApplicationContext.Users.FindAsync(userId);
-        }
 
         public async Task<IEnumerable<User>> GetAllAsync()
         {
             return await _masterContractApplicationContext.Users.ToListAsync();
         }
 
+        public async Task<User> GetUserByIdAsync(Guid Id)
+        {
+            return await _masterContractApplicationContext.Users.FirstOrDefaultAsync(u=> u.Id == Id);
+        }
+
         public async Task<User> AddUserAsync(User user)
         {
-            await _masterContractApplicationContext.AddAsync(user);
+            user.Id = Guid.NewGuid();
+            _masterContractApplicationContext.Add(user);
             await _masterContractApplicationContext.SaveChangesAsync();
             return user;
         }
 
-        public async Task UpdateUserAsync(User user)
+        public async Task<User> UpdateUserAsync(Guid Id,User user)
         { 
-          _masterContractApplicationContext.Users.Update(user);
-          await _masterContractApplicationContext.SaveChangesAsync();
+           var userUpdate = await _masterContractApplicationContext.Users.SingleOrDefaultAsync(u => u.Id == Id);
+            if (userUpdate is not null)
+            {
+                userUpdate.FisrtName = user.FisrtName;
+                userUpdate.LastName = user.FisrtName;
+                userUpdate.EmailAddress = user.Password;
+                userUpdate.Password = user.Password;
+                userUpdate.RegNumber = user.RegNumber;
+                userUpdate.IsActived = user.IsActived;
+                userUpdate.UserRole = user.UserRole;
+
+                await _masterContractApplicationContext.SaveChangesAsync();
+
+                return userUpdate;
+            }
+            return user;
         }
 
-        public async Task DeleteUserAsync(int userId)
+        public async Task<bool> DeleteUserAsync(Guid Id)
         {
-            var deleteUser = await GetByIdAsync(userId);
-            _masterContractApplicationContext.Users.Remove(deleteUser);
-            await _masterContractApplicationContext.SaveChangesAsync();
+            var deleteUser = await _masterContractApplicationContext.Users.SingleOrDefaultAsync(u => u.Id == Id);
+            if (deleteUser is not null) {
+                _masterContractApplicationContext.Users.Remove(deleteUser);
+                return await _masterContractApplicationContext.SaveChangesAsync() > 0;
+            }
+            return false;
         }
     }
 }

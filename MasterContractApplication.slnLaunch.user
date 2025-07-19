@@ -8,7 +8,7 @@
         "DebugTarget": ""
       },
       {
-        "Name": "MasterContractApplication.Portal\\MasterContractApplication.Portal\\MasterContractApplication.Portal.csproj",
+        "Name": "MasterContractApplication.Portal\\MasterContractApplication.Portal.csproj",
         "Action": "Start"
       }
     ]
