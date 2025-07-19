@@ -10,3 +10,4 @@ C:\Git\MasterControlApplication\MasterContractApplication\MasterContractApplicat
 C:\Git\MasterControlApplication\MasterContractApplication\MasterContractApplication.Domain\obj\Debug\net8.0\refint\MasterContractApplication.Domain.dll
 C:\Git\MasterControlApplication\MasterContractApplication\MasterContractApplication.Domain\obj\Debug\net8.0\MasterContractApplication.Domain.pdb
 C:\Git\MasterControlApplication\MasterContractApplication\MasterContractApplication.Domain\obj\Debug\net8.0\ref\MasterContractApplication.Domain.dll
+C:\Git\MasterControlApplication\MasterContractApplication\MasterContractApplication.Domain\obj\Debug\net8.0\MasterContractApplication.Domain.csproj.AssemblyReference.cache

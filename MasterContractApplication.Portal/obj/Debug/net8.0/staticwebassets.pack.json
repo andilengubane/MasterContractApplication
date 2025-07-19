@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Portal\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MasterContractApplication.Portal.bundle.scp.css",
+      "PackagePath": "staticwebassets\\MasterContractApplication.Portal.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Portal\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Portal\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Portal\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Portal\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MasterContractApplication.Portal.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MasterContractApplication.Portal.props",
+      "PackagePath": "build\\MasterContractApplication.Portal.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MasterContractApplication.Portal.props",
+      "PackagePath": "buildMultiTargeting\\MasterContractApplication.Portal.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MasterContractApplication.Portal.props",
+      "PackagePath": "buildTransitive\\MasterContractApplication.Portal.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

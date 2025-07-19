@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "0xU1Acsr5gxOBX1FJBdlo1c+IOlhQmCCqJ6xWrr9ONfzKTZBQMqyh/66GgehntoJ2DhXDA+82TKVSFRH4w06cQ==",
+  "dgSpecHash": "6CZbakHd7qFyVyouuqeZ1+tMzrPCDBonie7/YKmVBRawXINamRhaPXk1kX7l8i4eK93rSH8llH7SRr6euFm3Ng==",
   "success": true,
   "projectFilePath": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Domain\\MasterContractApplication.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.7\\microsoft.extensions.dependencyinjection.9.0.7.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.7\\microsoft.extensions.dependencyinjection.abstractions.9.0.7.nupkg.sha512"
+  ],
   "logs": []
 }

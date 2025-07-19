@@ -1,13 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MasterContractApplication.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace MasterContractApplication.Infrastructure
 {
-    public class InfastructureDependencyRegister 
+    public static class InfastructureDependencyRegister 
     {
-
+        public static IServiceCollection AddInfastractureDI(this IServiceCollection services) 
+        {
+            services.AddDbContext<MasterContractApplicationContext>(option =>
+            {
+                option.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=MasterContractApplication;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+            });
+            return services;
+        }
     }
 }
