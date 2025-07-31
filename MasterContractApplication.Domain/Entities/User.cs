@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,7 +24,11 @@ namespace MasterContractApplication.Domain.Entities
         public string Password { get; set; } = string.Empty;
         [Required]
         public string RegNumber { get; set; } = string.Empty;
-        public bool IsActived { get; set; } 
-        public int UserRole { get; set; }
+        public bool IsActived { get; set; }
+        [ForeignKey("Role")]
+        public int UserRoleId { get; set; }
+        public virtual Role Role { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public DateTime ModifyDate { get; set; }
     }
 }
