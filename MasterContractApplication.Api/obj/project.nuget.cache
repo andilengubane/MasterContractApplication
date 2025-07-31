@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "30PV3S9MvJo1WAOlyIy8gCNAGmj2XAJd89kFnkp3vm0k/NcRPszL3MMMtmxHxRRhab0CK9pC5SuaWgmaBpjG3A==",
+  "dgSpecHash": "oPNDa0m+LherBwvpB0jJ2bicvmCBLQTaCTPBgSSZ6pg9h3aBnK09g3MNdu7URYq5i4X3/Z05Wj1nWhelJOdAtw==",
   "success": true,
   "projectFilePath": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Api\\MasterContractApplication.Api.csproj",
   "expectedPackageFiles": [
@@ -69,6 +69,7 @@
     "C:\\Users\\AnNgubane\\.nuget\\packages\\system.clientmodel\\1.5.1\\system.clientmodel.1.5.1.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\system.collections.immutable\\7.0.0\\system.collections.immutable.7.0.0.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\system.composition\\7.0.0\\system.composition.7.0.0.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\system.composition.attributedmodel\\7.0.0\\system.composition.attributedmodel.7.0.0.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\system.composition.convention\\7.0.0\\system.composition.convention.7.0.0.nupkg.sha512",

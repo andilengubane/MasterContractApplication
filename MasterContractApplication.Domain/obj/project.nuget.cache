@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "6CZbakHd7qFyVyouuqeZ1+tMzrPCDBonie7/YKmVBRawXINamRhaPXk1kX7l8i4eK93rSH8llH7SRr6euFm3Ng==",
+  "dgSpecHash": "4f6ZHHlnpFT4ucr/XD12MZdOzdFflP52Jowsjip14PKRIVf1otPDDSWSNwMhDQV0WHIQapynpaYe/tcXHSP/lw==",
   "success": true,
   "projectFilePath": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Domain\\MasterContractApplication.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.7\\microsoft.extensions.dependencyinjection.9.0.7.nupkg.sha512",
-    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.7\\microsoft.extensions.dependencyinjection.abstractions.9.0.7.nupkg.sha512"
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.7\\microsoft.extensions.dependencyinjection.abstractions.9.0.7.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

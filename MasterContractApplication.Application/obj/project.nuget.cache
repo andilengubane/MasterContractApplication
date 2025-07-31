@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "v4M1JV5HyJD97TTzBbz4E21/qmBD1WNRh+ymRtcNglnhVdvZ91ayt+ec1PvYgvNU0DHKbdiYXSs7Z3F5RLsExQ==",
+  "dgSpecHash": "xbZblIGxsakGNLrfDc5s0mynDjq4CYBoFzgkVMZxJW8p1ePJy1fnX1zGwilQbPtmoicLjJkFvcHKEF5ualtj+g==",
   "success": true,
   "projectFilePath": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Application\\MasterContractApplication.Application.csproj",
   "expectedPackageFiles": [
@@ -15,7 +15,8 @@
     "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.0.1\\microsoft.identitymodel.abstractions.8.0.1.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.0.1\\microsoft.identitymodel.jsonwebtokens.8.0.1.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.identitymodel.logging\\8.0.1\\microsoft.identitymodel.logging.8.0.1.nupkg.sha512",
-    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.0.1\\microsoft.identitymodel.tokens.8.0.1.nupkg.sha512"
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.0.1\\microsoft.identitymodel.tokens.8.0.1.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -16,6 +16,7 @@ namespace MasterContractApplication.Infrastructure
             });
 
             services.AddScoped<IUserRepository, UserRepositor>();
+            services.AddScoped<IRoleRepository, RoleRepository>();
 
             return services;
         }

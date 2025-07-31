@@ -26,8 +26,8 @@ namespace MasterContractApplication.Domain.Entities
         public string RegNumber { get; set; } = string.Empty;
         public bool IsActived { get; set; }
         [ForeignKey("Role")]
-        public int UserRoleId { get; set; }
-        public virtual Role Role { get; set; }
+        public Guid UserRoleId { get; set; }
+        public virtual Role Role { get; set; } 
         public DateTime CreatedDate { get; set; }
         public DateTime ModifyDate { get; set; }
     }
