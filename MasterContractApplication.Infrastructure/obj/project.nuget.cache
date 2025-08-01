@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vB+ZA+d48rNTWSl7smEaafDIiwkeqzj5isQ1Ri8aPf3JRgyhmhgOd3BFlxCuwekEBOXo/GOiQYPrbGuM35G/Ww==",
+  "dgSpecHash": "jUuI1MGgHYES4nm4yAHKDW3A6RoWNMUuvGcvN9XljRwBDoPYV7iJJYB9CuPF+8wTdLFA4I0HSmSyjMzhYsqU5Q==",
   "success": true,
   "projectFilePath": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Infrastructure\\MasterContractApplication.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -39,6 +39,9 @@
     "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\10.0.0-preview.6.25358.103\\microsoft.extensions.dependencyinjection.10.0.0-preview.6.25358.103.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.0-preview.6.25358.103\\microsoft.extensions.dependencyinjection.abstractions.10.0.0-preview.6.25358.103.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.dependencymodel\\9.0.7\\microsoft.extensions.dependencymodel.9.0.7.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.diagnostics\\9.0.7\\microsoft.extensions.diagnostics.9.0.7.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.diagnostics.abstractions\\9.0.7\\microsoft.extensions.diagnostics.abstractions.9.0.7.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.http\\9.0.7\\microsoft.extensions.http.9.0.7.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.logging\\10.0.0-preview.6.25358.103\\microsoft.extensions.logging.10.0.0-preview.6.25358.103.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.0-preview.6.25358.103\\microsoft.extensions.logging.abstractions.10.0.0-preview.6.25358.103.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.options\\10.0.0-preview.6.25358.103\\microsoft.extensions.options.10.0.0-preview.6.25358.103.nupkg.sha512",

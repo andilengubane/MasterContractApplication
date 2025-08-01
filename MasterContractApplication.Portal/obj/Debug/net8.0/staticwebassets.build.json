@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fC0QVM/81Oo4T3sb7iIkgwNs1tQJdxCKwygEahrzxeI=",
+  "Hash": "f/MDFT3JSZ5t14vuMmGBVpI87LB9msHz3vBeTUZ1tZM=",
   "Source": "MasterContractApplication.Portal",
   "BasePath": "_content/MasterContractApplication.Portal",
   "Mode": "Default",
@@ -129,6 +129,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\AnNgubane\\.nuget\\packages\\mudblazor\\8.10.0\\staticwebassets\\MudBlazor.min.css",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\AnNgubane\\.nuget\\packages\\mudblazor\\8.10.0\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\AnNgubane\\.nuget\\packages\\mudblazor\\8.10.0\\staticwebassets\\MudBlazor.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\AnNgubane\\.nuget\\packages\\mudblazor\\8.10.0\\staticwebassets\\MudBlazor.min.js",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\AnNgubane\\.nuget\\packages\\mudblazor\\8.10.0\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\AnNgubane\\.nuget\\packages\\mudblazor\\8.10.0\\staticwebassets\\MudBlazor.min.js"
     }
   ]
 }

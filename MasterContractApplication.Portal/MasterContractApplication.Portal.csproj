@@ -16,4 +16,8 @@
     <PackageReference Include="MudBlazor" Version="8.10.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MasterContractApplication.Domain\MasterContractApplication.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

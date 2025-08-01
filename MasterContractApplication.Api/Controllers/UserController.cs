@@ -4,6 +4,7 @@ using MasterContractApplication.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace MasterContractApplication.Api.Controllers
 {
@@ -21,8 +22,8 @@ namespace MasterContractApplication.Api.Controllers
         [HttpGet()]
         public async Task<IActionResult> GetAllUserAsync()
         {
-            var result = await sender.Send(new GetAllUsersQuery());
-            return Ok(result);
+           var result = await sender.Send(new GetAllUsersQuery());
+           return Ok(result);
         }
 
         [HttpGet("{id}")]

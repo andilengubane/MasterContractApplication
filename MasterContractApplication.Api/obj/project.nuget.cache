@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oPNDa0m+LherBwvpB0jJ2bicvmCBLQTaCTPBgSSZ6pg9h3aBnK09g3MNdu7URYq5i4X3/Z05Wj1nWhelJOdAtw==",
+  "dgSpecHash": "nND5NHJUYqCVVr1GemaI1ltkmHrl+ZoOff8unCY37rHdEBwYfncY5YiQjjp05jm7RkdKxaaVt/BWP6vSxQukxw==",
   "success": true,
   "projectFilePath": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Api\\MasterContractApplication.Api.csproj",
   "expectedPackageFiles": [
@@ -40,6 +40,9 @@
     "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\10.0.0-preview.6.25358.103\\microsoft.extensions.dependencyinjection.10.0.0-preview.6.25358.103.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.0-preview.6.25358.103\\microsoft.extensions.dependencyinjection.abstractions.10.0.0-preview.6.25358.103.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.dependencymodel\\9.0.7\\microsoft.extensions.dependencymodel.9.0.7.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.diagnostics\\9.0.7\\microsoft.extensions.diagnostics.9.0.7.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.diagnostics.abstractions\\9.0.7\\microsoft.extensions.diagnostics.abstractions.9.0.7.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.http\\9.0.7\\microsoft.extensions.http.9.0.7.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.logging\\10.0.0-preview.6.25358.103\\microsoft.extensions.logging.10.0.0-preview.6.25358.103.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.0-preview.6.25358.103\\microsoft.extensions.logging.abstractions.10.0.0-preview.6.25358.103.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.options\\10.0.0-preview.6.25358.103\\microsoft.extensions.options.10.0.0-preview.6.25358.103.nupkg.sha512",

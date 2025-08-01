@@ -1,8 +1,12 @@
 ﻿using MasterContractApplication.Domain.Interfaces;
+using MasterContractApplication.Domain.Options;
 using MasterContractApplication.Infrastructure.Data;
 using MasterContractApplication.Infrastructure.Repositories;
+using MasterContractApplication.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 
 namespace MasterContractApplication.Infrastructure
 {
@@ -10,13 +14,14 @@ namespace MasterContractApplication.Infrastructure
     {
         public static IServiceCollection AddInfastractureDI(this IServiceCollection services) 
         {
-            services.AddDbContext<MasterContractApplicationContext>(option =>
+            services.AddDbContext<MasterContractApplicationContext>((provider ,option) =>
             {
-                option.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=MasterContractApplication;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+                option.UseSqlServer(provider.GetRequiredService<IOptionsSnapshot<ConnectioStringOptions>>().Value.DefaultConnection);
             });
 
             services.AddScoped<IUserRepository, UserRepositor>();
             services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddHttpClient<ContextHttpClientService>();
 
             return services;
         }
