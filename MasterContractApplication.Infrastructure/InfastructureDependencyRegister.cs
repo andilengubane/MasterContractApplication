@@ -3,8 +3,8 @@ using MasterContractApplication.Domain.Options;
 using MasterContractApplication.Infrastructure.Data;
 using MasterContractApplication.Infrastructure.Repositories;
 using MasterContractApplication.Infrastructure.Services;
+using MasterContractApplication.Infrastructure.Services.Interface;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
@@ -21,7 +21,15 @@ namespace MasterContractApplication.Infrastructure
 
             services.AddScoped<IUserRepository, UserRepositor>();
             services.AddScoped<IRoleRepository, RoleRepository>();
-            services.AddHttpClient<ContextHttpClientService>();
+            services.AddScoped<IExternalVenderRepository, ContextHttpClientService>();
+
+
+            //TODO : adding base to the appsettings file.
+            services.AddHttpClient<IContextHttpClientService, ContextHttpClientService>(option => 
+            {
+                option.BaseAddress = new Uri("base address");
+            });
+
 
             return services;
         }
