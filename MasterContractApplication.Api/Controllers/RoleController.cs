@@ -1,23 +1,38 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MasterContractApplication.Application.Command;
+using MasterContractApplication.Application.Command.Roles;
+using MasterContractApplication.Application.Queries;
+using MasterContractApplication.Application.Queries.Roles;
+using MasterContractApplication.Domain.Entities;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
 
 namespace MasterContractApplication.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RoleController : ControllerBase
+    public class RoleController(ISender sender) : ControllerBase
     {
-        
-        [HttpGet]
-        public IEnumerable<string> Get()
+
+        [HttpPost("")]
+        public async Task<IActionResult> AddUserAsync([FromBody] Role role)
         {
-            return new string[] { "value1", "value2" };
+            var result = await sender.Send(new AddRoleCommand(role));
+            return Ok(result);
+        }
+
+        [HttpGet()]
+        public async Task<IActionResult> GetAllRoleAsync()
+        {
+            var result = await sender.Send(new GetAllRoleQuery());
+            return Ok(result);
         }
 
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<IActionResult> GetRoleByIdAsync([FromRoute] Guid id)
         {
-            return "value";
+            var result = await sender.Send(new GetRoleByIdQuery(id));
+            return Ok(result);
         }
     }
 }
