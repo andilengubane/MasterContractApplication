@@ -4,14 +4,14 @@
     "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Portal\\MasterContractApplication.Portal.csproj": {}
   },
   "projects": {
-    "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Domain\\MasterContractApplication.Domain.csproj": {
+    "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Portal\\MasterContractApplication.Portal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Domain\\MasterContractApplication.Domain.csproj",
-        "projectName": "MasterContractApplication.Domain",
-        "projectPath": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Domain\\MasterContractApplication.Domain.csproj",
+        "projectUniqueName": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Portal\\MasterContractApplication.Portal.csproj",
+        "projectName": "MasterContractApplication.Portal",
+        "projectPath": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Portal\\MasterContractApplication.Portal.csproj",
         "packagesPath": "C:\\Users\\AnNgubane\\.nuget\\packages\\",
-        "outputPath": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Domain\\obj\\",
+        "outputPath": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Portal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -51,121 +51,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.Extensions.Configuration.Abstractions": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Microsoft.Extensions.DependencyInjection": {
-              "target": "Package",
-              "version": "[9.0.7, )"
-            },
-            "Microsoft.Extensions.Options.ConfigurationExtensions": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "System.ComponentModel.Annotations": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Portal\\MasterContractApplication.Portal.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Portal\\MasterContractApplication.Portal.csproj",
-        "projectName": "MasterContractApplication.Portal",
-        "projectPath": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Portal\\MasterContractApplication.Portal.csproj",
-        "packagesPath": "C:\\Users\\AnNgubane\\.nuget\\packages\\",
-        "outputPath": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Portal\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\AnNgubane\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/ClienteleLimited/_packaging/ClienteleLimited/nuget/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Domain\\MasterContractApplication.Domain.csproj": {
-                "projectPath": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Domain\\MasterContractApplication.Domain.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "dependencies": {
-            "DotNet.Highcharts": {
-              "target": "Package",
-              "version": "[4.0.0, )"
-            },
-            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.2, )"
-            },
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.2, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[8.0.2, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "target": "Package",
-              "version": "[8.0.2, )"
-            },
-            "MudBlazor": {
-              "target": "Package",
-              "version": "[8.10.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

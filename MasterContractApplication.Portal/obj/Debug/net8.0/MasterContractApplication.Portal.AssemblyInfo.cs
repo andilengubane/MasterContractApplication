@@ -11,11 +11,10 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-MasterContractApplication.Portal-edc119f3-cefd-441b-9bad-68acb1b1f42b")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("MasterContractApplication.Portal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+36e6819a399f7a3a6ffef15631bbf28e2ad64330")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31a195b051a978bcdb25f6ec8733c3c9bc9da681")]
 [assembly: System.Reflection.AssemblyProductAttribute("MasterContractApplication.Portal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MasterContractApplication.Portal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -23,13 +23,11 @@ namespace MasterContractApplication.Infrastructure
             services.AddScoped<IRoleRepository, RoleRepository>();
             services.AddScoped<IExternalVenderRepository, ContextHttpClientService>();
 
-
             //TODO : adding base to the appsettings file.
             services.AddHttpClient<IContextHttpClientService, ContextHttpClientService>(option => 
             {
                 option.BaseAddress = new Uri("base address");
             });
-
 
             return services;
         }
