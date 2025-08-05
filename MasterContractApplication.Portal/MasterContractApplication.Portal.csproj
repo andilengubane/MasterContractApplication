@@ -7,11 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Components\Account\" />
     <Folder Include="Components\Banking\" />
     <Folder Include="Components\Inventory\" />
     <Folder Include="Components\Role\" />
-    <Folder Include="Components\User\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blazor.Bootstrap" Version="3.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MasterContractApplication.Domain\MasterContractApplication.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,8 +1,27 @@
 {
   "version": 2,
-  "dgSpecHash": "G3IQO8DGkheKqg0yOaffDL0zZvEXPByEraoNO127rdHhIgGupTo6gwmJsGcO3eFaNQXg1Dqtwvmz9QZzHeh80g==",
+  "dgSpecHash": "Bz11lhi+W+ky/jPrZiDknV7oskSUbv/boHQMtEQwjNVb5OKVKxhMeDngY1fgdZt04aeAuBrpP16kTsJaX77T3Q==",
   "success": true,
   "projectFilePath": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Portal\\MasterContractApplication.Portal.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\blazor.bootstrap\\3.4.0\\blazor.bootstrap.3.4.0.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.11\\microsoft.aspnetcore.authorization.8.0.11.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.11\\microsoft.aspnetcore.components.8.0.11.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\8.0.11\\microsoft.aspnetcore.components.analyzers.8.0.11.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\8.0.11\\microsoft.aspnetcore.components.forms.8.0.11.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.aspnetcore.components.web\\8.0.11\\microsoft.aspnetcore.components.web.8.0.11.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.aspnetcore.metadata\\8.0.11\\microsoft.aspnetcore.metadata.8.0.11.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.configuration.binder\\8.0.0\\microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.7\\microsoft.extensions.dependencyinjection.9.0.7.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.7\\microsoft.extensions.dependencyinjection.abstractions.9.0.7.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\8.0.0\\microsoft.extensions.options.configurationextensions.8.0.0.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.jsinterop\\8.0.11\\microsoft.jsinterop.8.0.11.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

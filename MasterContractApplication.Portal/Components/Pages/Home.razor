@@ -1,7 +1,188 @@
 ﻿@page "/"
+@rendermode InteractiveServer
+@using Color = System.Drawing.Color
 
 <PageTitle>Home</PageTitle>
+<br/>
+<div class="row">
+    <div class="col-sm-3">
+        <Card Color="CardColor.Primary">
+            <CardBody>
+                <CardTitle>Special title treatment</CardTitle>
+                <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+            </CardBody>
+        </Card>
+    </div>
+    <div class="col-sm-3">
+        <Card Color="CardColor.Success">
+            <CardBody>
+                <CardTitle>Special title treatment</CardTitle>
+                <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+            </CardBody>
+        </Card>
+    </div>
+    <div class="col-sm-3">
+        <Card Color="CardColor.Warning">
+            <CardBody>
+                <CardTitle>Special title treatment</CardTitle>
+                <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+            </CardBody>
+        </Card>
+    </div>
+    <div class="col-sm-3">
+        <Card Color="CardColor.Danger">
+            <CardBody>
+                <CardTitle>Special title treatment</CardTitle>
+                <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+            </CardBody>
+        </Card>
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-sm-6">
+        <Card>
+            <CardBody>
+                <CardTitle>Special title treatment</CardTitle>
+                <CardText><ScatterChart @ref="scatterChart" Width="1000" Height="480" /></CardText>
+                <Button Color="ButtonColor.Primary" To="#" Type="ButtonType.Link">Go somewhere</Button>
+            </CardBody>
+        </Card>
+    </div>
+    <div class="col-sm-6">
+        <Card>
+            <CardBody>
+                <CardTitle>Special title treatment</CardTitle>
+                <CardText>With supporting text below as a natural lead-in</CardText>
+                <Button Color="ButtonColor.Primary" To="#" Type="ButtonType.Link">Go somewhere</Button>
+            </CardBody>
+        </Card>
+    </div>
+</div>
+<br/>
+<Grid TItem="Employee1"
+      AllowSorting="true"
+      Class="table table-hover table-bordered table-striped"
+      DataProvider="EmployeesDataProvider"
+      Responsive="true">
 
-<h1>Hello, world!</h1>
+    <GridColumns>
+        <GridColumn TItem="Employee1" HeaderText="Id" SortKeySelector="item => item.Id">
+            @context.Id
+        </GridColumn>
 
-Welcome to your new app.
+        <GridColumn TItem="Employee1" HeaderText="Employee Name" SortKeySelector="item => item.Name">
+            @context.Name
+        </GridColumn>
+
+        <GridColumn TItem="Employee1" HeaderText="Designation" SortKeySelector="item => item.Designation">
+            @context.Designation
+        </GridColumn>
+
+        <GridColumn TItem="Employee1" HeaderText="DOJ" SortKeySelector="item => item.DOJ">
+            @context.DOJ
+        </GridColumn>
+
+        <GridColumn TItem="Employee1" HeaderText="Active" SortKeySelector="item => item.IsActive">
+            @context.IsActive
+        </GridColumn>
+    </GridColumns>
+</Grid>
+
+@code {
+    private IEnumerable<Employee1> employees = default!;
+
+    private async Task<GridDataProviderResult<Employee1>> EmployeesDataProvider(GridDataProviderRequest<Employee1> request)
+    {
+        if (employees is null)
+            employees = GetEmployees();
+
+        return await Task.FromResult(request.ApplyTo(employees));
+    }
+
+    private IEnumerable<Employee1> GetEmployees()
+    {
+        return new List<Employee1>
+        {
+            new Employee1 { Id = 107, Name = "Alice", Designation = "AI Engineer", DOJ = DateTime.Today, IsActive = true },
+            new Employee1 { Id = 103, Name = "Bob", Designation = "Senior DevOps Engineer", DOJ = DateTime.Today, IsActive = true },
+            new Employee1 { Id = 106, Name = "John", Designation = "Data Engineer", DOJ = DateTime.Today, IsActive = true },
+            new Employee1 { Id = 104, Name = "Pop", Designation = "Associate Architect", DOJ = DateTime.Today, IsActive = false },
+            new Employee1 { Id = 108, Name = "Zayne", Designation = "Data Analyst", DOJ = DateTime.Today, IsActive = true },
+            new Employee1 { Id = 105, Name = "Ronald", Designation = "Senior Data Engineer", DOJ = DateTime.Today, IsActive = true },
+            new Employee1 { Id = 102, Name = "Line", Designation = "Architect", DOJ = DateTime.Today, IsActive = true },
+            new Employee1 { Id = 101, Name = "Daniel", Designation = "Architect", DOJ = DateTime.Today, IsActive = true },
+            new Employee1 { Id = 109, Name = "Isha", Designation = "App Maker", DOJ = DateTime.Today, IsActive = true },
+        };
+    }
+
+    public class Employee1
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Designation { get; set; } = string.Empty;
+        public DateTime DOJ { get; set; }
+        public bool IsActive { get; set; }
+    }
+
+    private ScatterChart scatterChart = default!;
+    private ScatterChartOptions scatterChartOptions = default!;
+    private ChartData chartData = default!;
+
+    private Random random = new();
+
+    protected override void OnInitialized()
+    {
+        chartData = new ChartData
+        {
+            Datasets = new()
+            {
+                GetRandomRadarChartDataset(0),
+                GetRandomRadarChartDataset(1),
+                GetRandomRadarChartDataset(2)
+            }
+        };
+
+        scatterChartOptions = new() { };
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await scatterChart.InitializeAsync(chartData, scatterChartOptions);
+        }
+        await base.OnAfterRenderAsync(firstRender);
+    }
+
+    #region Data Preparation
+
+    private ScatterChartDataset GetRandomRadarChartDataset(int recordIndex)
+    {
+        var c = ColorUtility.CategoricalTwelveColors[recordIndex].ToColor();
+
+        return new ScatterChartDataset
+        {
+            Label = $"Team {recordIndex + 1}",
+            Data = GetRandomData(),
+            BackgroundColor = c.ToRgbaString(),
+            BorderColor = c.ToRgbString(), 
+            BorderWidth = 2,
+            HoverBorderWidth = 4,
+        };
+    }
+
+    private List<ScatterChartDataPoint?> GetRandomData()
+    {
+        var data = new List<ScatterChartDataPoint?>();
+        for (var index = 0; index < 10; index++)
+        {
+            data.Add(new(random.Next(200), random.Next(200)));
+        }
+
+        return data;
+    }
+
+    #endregion Data Preparation
+
+}
