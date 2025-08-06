@@ -5,32 +5,32 @@
     <div class="col-sm-3">
         <Card Color="CardColor.Primary">
             <CardBody>
-                <CardTitle>Special title treatment</CardTitle>
-                <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                <CardTitle>Number of users</CardTitle>
+                <CardText>90.00</CardText>
             </CardBody>
         </Card>
     </div>
     <div class="col-sm-3">
         <Card Color="CardColor.Success">
             <CardBody>
-                <CardTitle>Special title treatment</CardTitle>
-                <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                <CardTitle>Number of companies</CardTitle>
+                <CardText>20</CardText>
             </CardBody>
         </Card>
     </div>
     <div class="col-sm-3">
         <Card Color="CardColor.Warning">
             <CardBody>
-                <CardTitle>Special title treatment</CardTitle>
-                <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                <CardTitle>Allocated products</CardTitle>
+                <CardText>300</CardText>
             </CardBody>
         </Card>
     </div>
     <div class="col-sm-3">
         <Card Color="CardColor.Danger">
             <CardBody>
-                <CardTitle>Special title treatment</CardTitle>
-                <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                <CardTitle>Number of inactive users</CardTitle>
+                <CardText>200</CardText>
             </CardBody>
         </Card>
     </div>
@@ -40,18 +40,16 @@
     <div class="col-sm-6">
         <Card>
             <CardBody>
-                <CardTitle>Special title treatment</CardTitle>
-                <CardText><ScatterChart @ref="scatterChart" Width="1000" Height="480" /></CardText>
-                <Button Color="ButtonColor.Primary" To="#" Type="ButtonType.Link">Go somewhere</Button>
+                <CardTitle>Users</CardTitle>
+                <CardText><ScatterChart @ref="scatterChart" Width="900" Height="460" /></CardText>
             </CardBody>
         </Card>
     </div>
     <div class="col-sm-6">
         <Card>
             <CardBody>
-                <CardTitle>Special title treatment</CardTitle>
-                <CardText>With supporting text below as a natural lead-in</CardText>
-                <Button Color="ButtonColor.Primary" To="#" Type="ButtonType.Link">Go somewhere</Button>
+                <CardTitle>Commpanies</CardTitle>
+                <CardText>  <LineChart @ref="lineChart" Width="900" Height="460" /></CardText>
             </CardBody>
         </Card>
     </div>
@@ -108,8 +106,6 @@
             new Employee1 { Id = 108, Name = "Zayne", Designation = "Data Analyst", DOJ = DateTime.Today, IsActive = true },
             new Employee1 { Id = 105, Name = "Ronald", Designation = "Senior Data Engineer", DOJ = DateTime.Today, IsActive = true },
             new Employee1 { Id = 102, Name = "Line", Designation = "Architect", DOJ = DateTime.Today, IsActive = true },
-            new Employee1 { Id = 101, Name = "Daniel", Designation = "Architect", DOJ = DateTime.Today, IsActive = true },
-            new Employee1 { Id = 109, Name = "Isha", Designation = "App Maker", DOJ = DateTime.Today, IsActive = true },
         };
     }
 
@@ -126,6 +122,10 @@
     private ScatterChartOptions scatterChartOptions = default!;
     private ChartData chartData = default!;
 
+    private LineChart lineChart = default!;
+    private LineChartOptions lineChartOptions = default!;
+    private ChartData _chartData = default!;
+
     private Random random = new();
 
     protected override void OnInitialized()
@@ -139,7 +139,7 @@
                 GetRandomRadarChartDataset(2)
             }
         };
-
+        GetLineChartData();
         scatterChartOptions = new() { };
     }
 
@@ -150,9 +150,14 @@
             await scatterChart.InitializeAsync(chartData, scatterChartOptions);
         }
         await base.OnAfterRenderAsync(firstRender);
-    }
 
-    #region Data Preparation
+        var secondRender = true;
+        if (secondRender)
+        {
+            await lineChart.InitializeAsync(_chartData, lineChartOptions);
+        }
+        await base.OnAfterRenderAsync(firstRender);
+    }
 
     private ScatterChartDataset GetRandomRadarChartDataset(int recordIndex)
     {
@@ -180,6 +185,56 @@
         return data;
     }
 
-    #endregion Data Preparation
+    protected async Task GetLineChartData()
+    {
+        var colors = ColorUtility.CategoricalTwelveColors;
 
+        var labels = new List<string> { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
+        var datasets = new List<IChartDataset>();
+
+        var dataset1 = new LineChartDataset
+        {
+            Label = "Windows",
+            Data = new List<double?> { 7265791, 5899643, 6317759, 6315641, 5338211, 8496306, 7568556, 8538933, 8274297, 8657298, 7548388, 7764845 },
+            BackgroundColor = colors[0],
+            BorderColor = colors[0],
+            BorderWidth = 2,
+            HoverBorderWidth = 4,
+        };
+        datasets.Add(dataset1);
+
+        var dataset2 = new LineChartDataset
+        {
+            Label = "macOS",
+            Data = new List<double?> { 1809499, 1816642, 2122410, 1809499, 1850793, 1846743, 1954797, 2391313, 1983430, 2469918, 2633303, 2821149 },
+            BackgroundColor = colors[1],
+            BorderColor = colors[1],
+            BorderWidth = 2,
+            HoverBorderWidth = 4,
+        };
+        datasets.Add(dataset2);
+
+        var dataset3 = new LineChartDataset
+        {
+            Label = "Other",
+            Data = new List<double?> { 1081241, 1100363, 1118136, 1073255, 1120315, 1395736, 1488788, 1489466, 1489947, 1414739, 1735811, 1820171 },
+            BackgroundColor = colors[2],
+            BorderColor = colors[2],
+            BorderWidth = 2,
+            HoverBorderWidth = 4,
+        };
+        datasets.Add(dataset3);
+
+        _chartData = new ChartData { Labels = labels, Datasets = datasets };
+
+        lineChartOptions = new();
+        lineChartOptions.Responsive = true;
+        lineChartOptions.Interaction = new Interaction { Mode = InteractionMode.Index };
+
+        lineChartOptions.Scales.X!.Title = new ChartAxesTitle { Text = "2019", Display = true };
+        lineChartOptions.Scales.Y!.Title = new ChartAxesTitle { Text = "Visitors", Display = true };
+
+        lineChartOptions.Plugins.Title!.Text = "Operating system";
+        lineChartOptions.Plugins.Title.Display = true;
+    }
 }

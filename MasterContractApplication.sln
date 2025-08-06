@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterContractApplication.A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterContractApplication.UnitTests", "MasterContractApplication.UnitTests\MasterContractApplication.UnitTests.csproj", "{919667AB-271E-4C09-9707-3165D102A2CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterContractApplication.Portal", "MasterContractApplication.Portal\MasterContractApplication.Portal.csproj", "{C8F62C79-A609-4012-9B67-E8CD0F4200A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterContractApplication.Portal", "MasterContractApplication.Portal\MasterContractApplication.Portal.csproj", "{C8F62C79-A609-4012-9B67-E8CD0F4200A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

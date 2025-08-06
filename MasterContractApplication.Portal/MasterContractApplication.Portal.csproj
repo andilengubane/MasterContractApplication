@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Components\Banking\" />
     <Folder Include="Components\Inventory\" />
     <Folder Include="Components\Role\" />
   </ItemGroup>
