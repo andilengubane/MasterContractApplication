@@ -12,12 +12,12 @@ main[b-g475zczupl] {
 }
 
 .sidebar[b-g475zczupl] {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    background-image: linear-gradient(180deg, #198754 0%, #198754 70%);
 }
 
 .top-row[b-g475zczupl] {
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #d6d5d5;
+    background-color: #198754;
+    border-bottom: 1px solid #198754;
     justify-content: flex-end;
     height: 3.5rem;
     display: flex;
