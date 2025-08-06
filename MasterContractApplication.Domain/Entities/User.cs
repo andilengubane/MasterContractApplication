@@ -22,7 +22,7 @@ namespace MasterContractApplication.Domain.Entities
         public bool IsActived { get; set; }
         [ForeignKey("Role")]
         public Guid UserRoleId { get; set; }
-        public virtual Role Role { get; set; } 
+        public virtual Role Role { get; set; } = new();
         public DateTime CreatedDate { get; set; }
         public DateTime ModifyDate { get; set; }
     }

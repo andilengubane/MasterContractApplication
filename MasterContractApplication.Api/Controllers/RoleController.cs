@@ -1,7 +1,7 @@
 ﻿using MasterContractApplication.Application.Command;
-using MasterContractApplication.Application.Command.Roles;
-using MasterContractApplication.Application.Queries;
-using MasterContractApplication.Application.Queries.Roles;
+using MasterContractApplication.Application.Command.RoleCommand;
+using MasterContractApplication.Application.Command.UserCommand;
+using MasterContractApplication.Application.Queries.RoleQueries;
 using MasterContractApplication.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;

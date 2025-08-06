@@ -2,7 +2,7 @@
 using MasterContractApplication.Domain.Entities;
 using MasterContractApplication.Domain.Interfaces;
 
-namespace MasterContractApplication.Application.Queries
+namespace MasterContractApplication.Application.Queries.UserQueries
 {
     public record GetUserByIdQuery(Guid Id) : IRequest<User>;
 

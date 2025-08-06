@@ -1,8 +1,8 @@
-﻿using MasterContractApplication.Domain.Entities;
+﻿using MediatR;
+using MasterContractApplication.Domain.Entities;
 using MasterContractApplication.Domain.Interfaces;
-using MediatR;
 
-namespace MasterContractApplication.Application.Queries
+namespace MasterContractApplication.Application.Queries.UserQueries
 {
     public record GetAllUsersQuery() : IRequest<IEnumerable<User>>;
 

@@ -1,0 +1,39 @@
+﻿
+ /*
+    101	Account reference	The unique reference for this record
+    126	AVS check number	SA ID number / Passport number/ Company registration
+    127	Is ID number	1 = This is an SA ID number. The system will validate the AVS check number supplied in 126 before submitting for verification
+    0 = company registration or passport number
+    131	Banking detail type	1 = Bank account
+    132	Bank account name	Account holder surname or company name. The bank will verify that the account name is as it appears in their records
+    133	Bank account type	1 = Current
+                            2 = Savings
+                            3 = Transmission
+    134	Branch code	6-digit branch code. Prefill with zeroes if less than 6
+    135	Filler	0
+    136	Bank account number	Bank account number
+    301	Extra 1	Custom user-defined data*
+    302	Extra 2	Custom user-defined data*
+    303	Extra 3	Custom user-defined data*
+*/
+
+
+/*
+     PARTICIPATING BANK	BRANCH CODE	REAL-TIME	BATCH
+     ABSA	632005	YES	YES
+     Access Bank/GRO	410506	YES	YES
+     African Bank	430000	YES	YES
+     Bidvest Bank	462005	NO	YES
+     Bank Zero	888000	YES	NO
+     Capitec Bank	470010	YES	YES
+     Capitec Business Bank	450105	NO	YES
+     Discovery Bank	679000	YES	YES
+     First National Bank	250655	YES	YES
+     Grindrod	584000	YES	NO
+     Investec Bank	580105	YES	YES
+     Nedbank	198765	YES	YES
+     Sasfin Bank	683000	YES	NO
+     Standard Bank*	051001	YES	YES
+     Thyme Bank	678910	YES	NO
+  */
+}

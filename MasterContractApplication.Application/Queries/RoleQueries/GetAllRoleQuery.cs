@@ -2,7 +2,7 @@
 using MasterContractApplication.Domain.Entities;
 using MasterContractApplication.Domain.Interfaces;
 
-namespace MasterContractApplication.Application.Queries.Roles
+namespace MasterContractApplication.Application.Queries.RoleQueries
 {
     public record GetAllRoleQuery() : IRequest<IEnumerable<Role>>;
 
@@ -14,5 +14,3 @@ namespace MasterContractApplication.Application.Queries.Roles
         }
     }
 }
-
-        

@@ -2,9 +2,9 @@
 using MasterContractApplication.Domain.Entities;
 using MasterContractApplication.Domain.Interfaces;
 
-namespace MasterContractApplication.Application.Queries.Roles
+namespace MasterContractApplication.Application.Queries.RoleQueries
 {
-    public record GetRoleByIdQuery(Guid id): IRequest<Role>;
+    public record GetRoleByIdQuery(Guid id) : IRequest<Role>;
 
     internal class GetRoleByIdQueryHandle(IRoleRepository roleRepository) : IRequestHandler<GetRoleByIdQuery, Role>
     {

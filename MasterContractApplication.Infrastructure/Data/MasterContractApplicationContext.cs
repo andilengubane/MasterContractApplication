@@ -18,5 +18,7 @@ namespace MasterContractApplication.Infrastructure.Data
 
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
+        public DbSet<BankAccount> BankAccounts { get; set; }
+        public DbSet<BankDetails> BankDetails { get; set; }
     }
 }

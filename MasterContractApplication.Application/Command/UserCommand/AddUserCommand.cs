@@ -1,16 +1,11 @@
-﻿using MasterContractApplication.Application.Events;
+﻿using MediatR;
+using MasterContractApplication.Application.Events;
 using MasterContractApplication.Domain.Entities;
 using MasterContractApplication.Domain.Interfaces;
-using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MasterContractApplication.Application.Command
+namespace MasterContractApplication.Application.Command.UserCommand
 {
-    public record class AddUserCommand(User user): IRequest<User>;
+    public record AddUserCommand(User user) : IRequest<User>;
 
     public class AddUserCommandHandler(IUserRepository userRepository, IMediator mediator)
         : IRequestHandler<AddUserCommand, User>

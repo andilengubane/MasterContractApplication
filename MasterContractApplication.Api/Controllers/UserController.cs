@@ -1,10 +1,8 @@
-﻿using MasterContractApplication.Application.Command;
-using MasterContractApplication.Application.Queries;
-using MasterContractApplication.Domain.Entities;
-using MediatR;
-using Microsoft.AspNetCore.Http;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using MasterContractApplication.Domain.Entities;
+using MasterContractApplication.Application.Queries.UserQueries;
+using MasterContractApplication.Application.Command.UserCommand;
 
 namespace MasterContractApplication.Api.Controllers
 {

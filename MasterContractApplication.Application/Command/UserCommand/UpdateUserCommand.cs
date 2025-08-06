@@ -2,7 +2,7 @@
 using MasterContractApplication.Domain.Interfaces;
 using MediatR;
 
-namespace MasterContractApplication.Application.Command
+namespace MasterContractApplication.Application.Command.UserCommand
 {
     public record UpdateUserCommand(Guid id, User user) : IRequest<User>;
 
@@ -14,4 +14,3 @@ namespace MasterContractApplication.Application.Command
         }
     }
 }
-

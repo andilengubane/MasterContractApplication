@@ -1,6 +1,6 @@
-﻿using MasterContractApplication.Application.Queries;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using MasterContractApplication.Application.Queries.ExtensionQueries;
 
 namespace MasterContractApplication.Api.Controllers
 {
