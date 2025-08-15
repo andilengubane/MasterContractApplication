@@ -21,6 +21,14 @@ namespace MasterContractApplication.Infrastructure
 
             services.AddScoped<IUserRepository, UserRepositor>();
             services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddScoped<IAssignInventoryRepository, AssignInventoryRepository>();
+            services.AddScoped<IInventoryDetailsRepository, InventoryDetailsRepository>();
+            services.AddScoped<IInventoryRepository, InventoryRepository>();
+            services.AddScoped<IInventoryTypeRepository, InventoryTypeRepository>();
+            services.AddScoped<IPermissionsRepository, PermissionsRepository>();
+            services.AddScoped<IBankDetailsRepository, BankDetailsRepository>();
+            services.AddScoped<IBankAccountRepository, BankAccountRepository>();
+
             services.AddScoped<IExternalVenderRepository, ContextHttpClientService>();
 
             //TODO : adding base to the appsettings file.

@@ -136,16 +136,6 @@
     ]
   },
   {
-    "ContainingType": "MasterContractApplication.Api.Controllers.ExternalVenderController",
-    "Method": "GetDate",
-    "RelativePath": "api/ExternalVender",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "MasterContractApplication.Api.Controllers.RoleController",
     "Method": "AddUserAsync",
     "RelativePath": "api/Role",
