@@ -16,7 +16,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Command\InventoryCommand\InventoryDetailsCommand\" />
+    <Folder Include="Command\InventoryCommand\InventoryTypeCommand\" />
+    <Folder Include="Command\InventoryCommand\AssignInventoryCommand\" />
+    <Folder Include="Command\PermissionCommand\" />
     <Folder Include="Queries\BankQeries\" />
+    <Folder Include="Queries\InventoryQueries\InventoryDetailsQueries\" />
+    <Folder Include="Queries\InventoryQueries\InventoryTypeQueries\" />
+    <Folder Include="Queries\InventoryQueries\AssignInventoryQueries\" />
+    <Folder Include="Queries\PermissionQueries\" />
   </ItemGroup>
 
 </Project>
