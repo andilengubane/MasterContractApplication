@@ -11,5 +11,10 @@ namespace MasterContractApplication.Infrastructure.Repositories
         {
             return await _masterContractApplicationContext.InventoryDetails.ToListAsync();
         }
+
+        public async Task<InventoryDetails> GetInventoryDetailsByIdAsync(Guid Id)
+        {
+            return await _masterContractApplicationContext.InventoryDetails.FirstOrDefaultAsync(u => u.Id == Id);
+        }
     }
 }

@@ -11,5 +11,10 @@ namespace MasterContractApplication.Infrastructure.Repositories
         {
             return await _masterContractApplicationContext.Permissions.ToListAsync();
         }
+
+        public async Task<Permissions> GetPermissionsByIdAsync(Guid Id)
+        {
+            return await _masterContractApplicationContext.Permissions.FirstOrDefaultAsync(u => u.Id == Id);
+        }
     }
 }

@@ -4,6 +4,7 @@ namespace MasterContractApplication.Domain.Entities
 {
     public class AssignInventory
     {
+        
         public Guid Id { get; set; }
         public Guid CostCenterId { get; set; }
         [Required]
