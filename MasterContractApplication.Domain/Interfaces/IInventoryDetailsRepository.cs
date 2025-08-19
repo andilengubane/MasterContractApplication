@@ -7,5 +7,9 @@ namespace MasterContractApplication.Domain.Interfaces
         Task<IEnumerable<InventoryDetails>> GetAllInventoryDetailsAsync();
 
         Task<InventoryDetails> GetInventoryDetailsByIdAsync(Guid Id);
+
+        Task<InventoryDetails> AddInventoryDetailsAsync(InventoryDetails inventoryDetails);
+
+        Task<bool> RemoveInventoryDetailsAsync(Guid Id);
     }
 }

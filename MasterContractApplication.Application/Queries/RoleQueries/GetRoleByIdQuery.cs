@@ -6,11 +6,11 @@ namespace MasterContractApplication.Application.Queries.RoleQueries
 {
     public record GetRoleByIdQuery(Guid id) : IRequest<Role>;
 
-    internal class GetRoleByIdQueryHandle(IRoleRepository roleRepository) : IRequestHandler<GetRoleByIdQuery, Role>
+    public class GetRoleByIdQueryHandle(IRoleRepository _roleRepository) : IRequestHandler<GetRoleByIdQuery, Role>
     {
         public async Task<Role> Handle(GetRoleByIdQuery request, CancellationToken cancellationToken)
         {
-            return await roleRepository.GetRoleByIdAsync(request.id);
+            return await _roleRepository.GetRoleByIdAsync(request.id);
         }
     }
 }

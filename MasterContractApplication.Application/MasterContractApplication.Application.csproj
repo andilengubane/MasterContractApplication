@@ -16,11 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Command\InventoryCommand\InventoryDetailsCommand\" />
-    <Folder Include="Command\InventoryCommand\InventoryTypeCommand\" />
-    <Folder Include="Command\InventoryCommand\AssignInventoryCommand\" />
-    <Folder Include="Command\PermissionCommand\" />
-    <Folder Include="Queries\BankQeries\" />
+    <Folder Include="Queries\BankQeries\BankAccountDetailsQuery\" />
+    <Folder Include="Queries\BankQeries\BankDetailsQuery\" />
+    <Folder Include="Queries\BankAccountValidation\" />
   </ItemGroup>
 
 </Project>

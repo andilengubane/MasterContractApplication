@@ -6,11 +6,11 @@ namespace MasterContractApplication.Application.Queries.InventoryQueries.AssignI
 {
     public record GetAssignInventoryByIdQuery(Guid Id): IRequest<AssignInventory>;
 
-    internal class GetAssignInventoryByIdQueryHandler(IAssignInventoryRepository assignInventoryRepository) : IRequestHandler<GetAssignInventoryByIdQuery, AssignInventory>
+    public class GetAssignInventoryByIdQueryHandler(IAssignInventoryRepository _assignInventoryRepository) : IRequestHandler<GetAssignInventoryByIdQuery, AssignInventory>
     {
         public async Task<AssignInventory> Handle(GetAssignInventoryByIdQuery request, CancellationToken cancellationToken)
         {
-            return await assignInventoryRepository.GetAssignInventoryByIdAsync(request.Id);
+            return await _assignInventoryRepository.GetAssignInventoryByIdAsync(request.Id);
         }
     }
 }

@@ -14,7 +14,12 @@ namespace MasterContractApplication.Infrastructure.Repositories
 
         public async Task<Role> GetRoleByIdAsync(Guid Id)
         {
-            return await _masterContractApplicationContext.Roles.FirstOrDefaultAsync(u => u.Id == Id);
+            var role = await _masterContractApplicationContext.Roles.FirstOrDefaultAsync(u => u.Id == Id);
+
+            if (role == null)
+                throw new KeyNotFoundException($"No role found with Id: {Id}");
+
+            return role;
         }
 
         public async Task<Role> AddRoleAsync(Role role)
@@ -23,6 +28,17 @@ namespace MasterContractApplication.Infrastructure.Repositories
             _masterContractApplicationContext.Add(role);
             await _masterContractApplicationContext.SaveChangesAsync();
             return role;
+        }
+
+        public async Task<bool> RemoveRoleAsync(Guid Id)
+        {
+            var removeRole = await _masterContractApplicationContext.Roles.SingleOrDefaultAsync(u => u.Id == Id);
+            if (removeRole is not null)
+            {
+                _masterContractApplicationContext.Roles.Remove(removeRole);
+                return await _masterContractApplicationContext.SaveChangesAsync() > 0;
+            }
+            return false;
         }
     }
 }

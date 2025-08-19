@@ -14,7 +14,32 @@ namespace MasterContractApplication.Infrastructure.Repositories
 
         public async Task<Inventory> GetInventoryByIdAsync(Guid Id)
         {
-            return await _masterContractApplicationContext.Inventorys.FirstOrDefaultAsync(u => u.Id == Id);
+            var inventoryDetails = await _masterContractApplicationContext.Inventorys.FirstOrDefaultAsync(u => u.Id == Id);
+
+            if (inventoryDetails == null)
+                throw new KeyNotFoundException($"No inventory found with Id: {Id}");
+
+            return inventoryDetails;
+
+        }
+
+        public async Task<Inventory> AddInventoryAsync(Inventory inventory)
+        {
+            inventory.Id = Guid.NewGuid();
+            _masterContractApplicationContext.Add(inventory);
+            await _masterContractApplicationContext.SaveChangesAsync();
+            return inventory;
+        }
+
+        public async Task<bool> RemoveInventoryAsync(Guid Id)
+        {
+            var removeInventory = await _masterContractApplicationContext.Inventorys.SingleOrDefaultAsync(u => u.Id == Id);
+            if (removeInventory is not null)
+            {
+                _masterContractApplicationContext.Inventorys.Remove(removeInventory);
+                return await _masterContractApplicationContext.SaveChangesAsync() > 0;
+            }
+            return false;
         }
     }
 }

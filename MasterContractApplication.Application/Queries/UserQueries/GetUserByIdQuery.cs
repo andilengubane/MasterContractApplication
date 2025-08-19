@@ -6,11 +6,11 @@ namespace MasterContractApplication.Application.Queries.UserQueries
 {
     public record GetUserByIdQuery(Guid Id) : IRequest<User>;
 
-    internal class GetUserByIdQueryHandler(IUserRepository userRepository) : IRequestHandler<GetUserByIdQuery, User>
+    public class GetUserByIdQueryHandler(IUserRepository _userRepository) : IRequestHandler<GetUserByIdQuery, User>
     {
         public async Task<User> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
         {
-            return await userRepository.GetUserByIdAsync(request.Id);
+            return await _userRepository.GetUserByIdAsync(request.Id);
         }
     }
 }

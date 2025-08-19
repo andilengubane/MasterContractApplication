@@ -7,5 +7,11 @@ namespace MasterContractApplication.Domain.Interfaces
         Task<IEnumerable<Permissions>> GetAllPermissionsAsync();
 
         Task<Permissions> GetPermissionsByIdAsync(Guid Id);
+
+        Task<Permissions> AddPermissionsAsync(Permissions permissions);
+
+        Task<Permissions> UpdatePermissionsAsync(Guid Id, Permissions permissions);
+
+        Task<bool> RemovePermissionsAsync(Guid Id);
     }
 }

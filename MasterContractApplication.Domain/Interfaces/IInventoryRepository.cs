@@ -12,5 +12,9 @@ namespace MasterContractApplication.Domain.Interfaces
         Task<IEnumerable<Inventory>> GetAllInventoryAsync();
 
         Task<Inventory> GetInventoryByIdAsync(Guid Id);
+
+        Task<Inventory> AddInventoryAsync(Inventory inventory);
+
+        Task<bool> RemoveInventoryAsync(Guid Id);
     }
 }

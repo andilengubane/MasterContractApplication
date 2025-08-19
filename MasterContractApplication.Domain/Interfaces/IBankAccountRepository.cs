@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MasterContractApplication.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,12 @@ namespace MasterContractApplication.Domain.Interfaces
 {
     public interface IBankAccountRepository
     {
+        Task<IEnumerable<BankAccount>> GetAllBankAccountAsync();
+
+        Task<BankAccount> GetBankAccountByIdAsync(Guid Id);
+
+        Task<BankAccount> AddBankAccountsAsync(BankAccount bankAccount);
+
+        Task<bool> RemoveBankAccountsAsync(Guid Id);
     }
 }
