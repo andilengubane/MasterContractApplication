@@ -10,11 +10,9 @@ namespace MasterContractApplication.Domain.Interfaces
     public interface IBankDetailsRepository
     {
         Task<IEnumerable<BankDetails>> GetAllBankDetailsAsync();
-
-        Task<BankDetails> GetInventoryDetailsByIdAsync(Guid Id);
-
+        Task<BankDetails> GetBankDetailsByIdAsync(Guid Id);
         Task<BankDetails> AddBankDetailsAsync(BankDetails bankDetails);
-
-        Task<bool> RemoveInventoryTypeAsync(Guid Id);
+        Task<bool> RemoveBankDetailsAsync(Guid Id);
+        Task<BankDetails> UpdateBankDetailsAsync(Guid Id, BankDetails bankDetails);
     }
 }

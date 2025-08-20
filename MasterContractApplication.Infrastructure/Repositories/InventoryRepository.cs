@@ -41,5 +41,28 @@ namespace MasterContractApplication.Infrastructure.Repositories
             }
             return false;
         }
+        public async Task<Inventory> UpdateInventoryAsync(Guid Id, Inventory inventory)
+        {
+            var inventoryUpdate = await _masterContractApplicationContext.Inventorys.SingleOrDefaultAsync(u => u.Id == Id);
+            if (inventoryUpdate is not null)
+            {
+                inventoryUpdate.InventoryTypeId = inventory.InventoryTypeId;
+                inventoryUpdate.InventoryStatusId = inventory.InventoryStatusId;
+                inventoryUpdate.EquipmentStatusId = inventory.EquipmentStatusId;
+                inventoryUpdate.Name = inventory.Name;
+                inventoryUpdate.Description = inventory.Description;
+                inventoryUpdate.SerialNumber = inventory.SerialNumber;
+                inventoryUpdate.Model = inventory.Model;
+                inventoryUpdate.Supplier = inventory.Name;
+                inventoryUpdate.OrderDate = DateTime.Today;
+                inventoryUpdate.ExpireDate = DateTime.Today;
+                inventoryUpdate.CreateDate = DateTime.Today;
+
+                await _masterContractApplicationContext.SaveChangesAsync();
+
+                return inventoryUpdate;
+            }
+            return inventory;
+        }
     }
 }

@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Queries\BankQeries\BankAccountDetailsQuery\" />
     <Folder Include="Queries\BankQeries\BankDetailsQuery\" />
     <Folder Include="Queries\BankAccountValidation\" />
   </ItemGroup>

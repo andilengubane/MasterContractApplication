@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MasterContractApplication.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e85d26cf7e8719dd5fcfec50a87c8555d9be826f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a11fe63ba8fd72f2a7cb3486b068c535c1650b5")]
 [assembly: System.Reflection.AssemblyProductAttribute("MasterContractApplication.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MasterContractApplication.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

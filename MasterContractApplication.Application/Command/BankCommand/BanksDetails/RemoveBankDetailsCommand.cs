@@ -8,7 +8,7 @@ namespace MasterContractApplication.Application.Command.BankCommand.BanksDetails
     {
         public async Task<bool> Handle(RemoveBankDetailsCommand request, CancellationToken cancellationToken)
         {
-            return await _bankDetailsRepository.RemoveInventoryTypeAsync(request.Id);
+            return await _bankDetailsRepository.RemoveBankDetailsAsync(request.Id);
         }
     }
 }

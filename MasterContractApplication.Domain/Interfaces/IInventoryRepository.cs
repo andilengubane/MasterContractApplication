@@ -10,11 +10,9 @@ namespace MasterContractApplication.Domain.Interfaces
     public interface IInventoryRepository
     {
         Task<IEnumerable<Inventory>> GetAllInventoryAsync();
-
         Task<Inventory> GetInventoryByIdAsync(Guid Id);
-
         Task<Inventory> AddInventoryAsync(Inventory inventory);
-
         Task<bool> RemoveInventoryAsync(Guid Id);
+        Task<Inventory> UpdateInventoryAsync(Guid Id, Inventory inventory);
     }
 }

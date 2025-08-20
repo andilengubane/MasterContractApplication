@@ -22,7 +22,7 @@ namespace MasterContractApplication.Infrastructure.Repositories
             return inventoryDetails;
         }
 
-        public async Task<InventoryDetails> AddInventoryTypeAsync(InventoryDetails inventoryDetails)
+        public async Task<InventoryDetails> AddInventoryDetailsAsync(InventoryDetails inventoryDetails)
         {
             inventoryDetails.Id = Guid.NewGuid();
             _masterContractApplicationContext.Add(inventoryDetails);
@@ -30,7 +30,7 @@ namespace MasterContractApplication.Infrastructure.Repositories
             return inventoryDetails;
         }
 
-        public async Task<bool> RemoveInventoryTypeAsync(Guid Id)
+        public async Task<bool> RemoveInventoryDetailsAsync(Guid Id)
         {
             var removeInventoryDetails = await _masterContractApplicationContext.InventoryDetails.SingleOrDefaultAsync(u => u.Id == Id);
             if (removeInventoryDetails is not null)
@@ -39,6 +39,26 @@ namespace MasterContractApplication.Infrastructure.Repositories
                 return await _masterContractApplicationContext.SaveChangesAsync() > 0;
             }
             return false;
+        }
+
+        public async Task<InventoryDetails> UpdateInventoryDetailsAsync(Guid Id, InventoryDetails inventoryDetails)
+        {
+            var inventoryDetailsUpdate = await _masterContractApplicationContext.InventoryDetails.SingleOrDefaultAsync(u => u.Id == Id);
+            if (inventoryDetailsUpdate is not null)
+            {
+                inventoryDetailsUpdate.Name = inventoryDetails.Name;
+                inventoryDetailsUpdate.SerialNumber = inventoryDetails.SerialNumber;
+                inventoryDetailsUpdate.Model = inventoryDetails.Model;
+                inventoryDetailsUpdate.IsActive = inventoryDetails.IsActive;
+                inventoryDetailsUpdate.IsAssigned = inventoryDetails.IsAssigned;
+                inventoryDetailsUpdate.Type = inventoryDetails.Type;
+                inventoryDetailsUpdate.DateLogged = inventoryDetails.DateLogged;
+
+                await _masterContractApplicationContext.SaveChangesAsync();
+
+                return inventoryDetailsUpdate;
+            }
+            return inventoryDetails;
         }
     }
 }

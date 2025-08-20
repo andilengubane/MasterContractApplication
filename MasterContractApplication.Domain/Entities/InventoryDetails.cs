@@ -15,5 +15,6 @@ namespace MasterContractApplication.Domain.Entities
         public Nullable<bool> IsActive { get; set; }
         public bool IsAssigned { get; set; }
         public string Type { get; set; } = string.Empty;
+        public Nullable<DateTime> DateLogged { get; set; }
     }
 }

@@ -1,26 +1,25 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MasterContractApplication.Application.Queries.InventoryQueries.AssignInventoryQueries;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
 namespace MasterContractApplication.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BankAccountController : ControllerBase
+    public class BankAccountController(ISender sender) : ControllerBase
     {
-        [HttpGet]
-        public IEnumerable<string> Get()
+        [HttpGet()]
+        public async Task<IActionResult> GetAllAssignInventoryAsync()
         {
-            return new string[] { "value1", "value2" };
+            var result = await sender.Send(new GetAssignInventoryQuery());
+            return Ok(result);
         }
 
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<IActionResult> GetAllAssignInventoryAsync([FromRoute] Guid id)
         {
-            return "value";
-        }
-
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
+            var result = await sender.Send(new GetAssignInventoryByIdQuery(id));
+            return Ok(result);
         }
     }
 }

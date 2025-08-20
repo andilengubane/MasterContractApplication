@@ -40,5 +40,27 @@ namespace MasterContractApplication.Infrastructure.Repositories
             }
             return false;
         }
+        public async Task<BankAccount> UpdateBankAccountAsync(Guid Id, BankAccount bankAccount)
+        {
+            var bankAccountUpdate = await _masterContractApplicationContext.BankAccounts.SingleOrDefaultAsync(u => u.Id == Id);
+            if (bankAccountUpdate is not null)
+            {
+                bankAccountUpdate.AccountReference = bankAccount.AccountReference;
+                bankAccountUpdate.AVSNumber = bankAccount.AVSNumber;
+                bankAccountUpdate.IdNumber = bankAccount.IdNumber;
+                bankAccountUpdate.BankAccountDetails = bankAccount.BankAccountDetails;
+                bankAccountUpdate.BankAccountName = bankAccount.BankAccountName;
+                bankAccountUpdate.BankAccountType = bankAccount.BankAccountType;
+                bankAccountUpdate.BranchCode = bankAccount.BranchCode;
+                bankAccountUpdate.BankAccountNumber = bankAccount.BankAccountNumber;
+                bankAccountUpdate.IsActive = bankAccount.IsActive;
+                bankAccountUpdate.DateLogged = DateTime.Today;
+
+                await _masterContractApplicationContext.SaveChangesAsync();
+
+                return bankAccountUpdate;
+            }
+            return bankAccount;
+        }
     }
 }

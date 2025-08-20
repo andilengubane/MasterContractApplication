@@ -2,6 +2,7 @@
 using MasterContractApplication.Domain.Interfaces;
 using MasterContractApplication.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace MasterContractApplication.Infrastructure.Repositories
 {
@@ -41,5 +42,22 @@ namespace MasterContractApplication.Infrastructure.Repositories
             return false;
         }
 
+        public async Task<AssignInventory> UpdateassignInventoryAsync(Guid Id, AssignInventory assignInventory)
+        {
+            var assignInventoryUpddate = await _masterContractApplicationContext.AssignInventorys.SingleOrDefaultAsync(u => u.Id == Id);
+            if (assignInventoryUpddate is not null)
+            {
+                assignInventoryUpddate.CostCenterId = assignInventory.CostCenterId;
+                assignInventoryUpddate.InventoryId = assignInventory.InventoryId;
+                assignInventoryUpddate.EmployeeId = assignInventory.EmployeeId;
+                assignInventoryUpddate.InventoryTypeId = assignInventory.InventoryTypeId;
+                assignInventoryUpddate.IsActive = assignInventory.IsActive;
+                assignInventoryUpddate.DateLogged = DateTime.Today;
+
+                await _masterContractApplicationContext.SaveChangesAsync();
+                return assignInventoryUpddate;
+            }
+            return assignInventory;
+        }
     }
 }

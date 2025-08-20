@@ -18,5 +18,6 @@ namespace MasterContractApplication.Domain.Entities
         public string BranchCode { get; set; } = string.Empty;
         public string BankAccountNumber { get; set; } = string.Empty;
         public bool IsActive { get; set; }
+        public Nullable<DateTime> DateLogged { get; set; }
     }
 }
