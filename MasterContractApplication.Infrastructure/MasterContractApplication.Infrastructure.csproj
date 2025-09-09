@@ -22,6 +22,7 @@
     <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.7" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.0-preview.6.25358.103" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.0-preview.6.25358.103" />
+    <PackageReference Include="TextFlow" Version="1.2.3" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nND5NHJUYqCVVr1GemaI1ltkmHrl+ZoOff8unCY37rHdEBwYfncY5YiQjjp05jm7RkdKxaaVt/BWP6vSxQukxw==",
+  "dgSpecHash": "yoWE6kBkdGmZzBoZ2E7cI14Be1j8XOealDzsHlFDW5bX8GZe3g6QFPdpjIRV1PrXAr75n88x+UAMSMvOmrqo+g==",
   "success": true,
   "projectFilePath": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Api\\MasterContractApplication.Api.csproj",
   "expectedPackageFiles": [
@@ -100,7 +100,8 @@
     "C:\\Users\\AnNgubane\\.nuget\\packages\\system.text.encodings.web\\9.0.7\\system.text.encodings.web.9.0.7.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\system.text.json\\9.0.7\\system.text.json.9.0.7.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
-    "C:\\Users\\AnNgubane\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\textflow\\1.2.3\\textflow.1.2.3.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1946,6 +1946,15 @@
           }
         }
       },
+      "TextFlow/1.2.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/TextFlow.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/TextFlow.dll": {}
+        }
+      },
       "MasterContractApplication.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -5308,6 +5317,19 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "TextFlow/1.2.3": {
+      "sha512": "RFZLfOLhEePoYeI1e+QU/sSEDb8oP1w+5iSi+bQu2cnfYp5GqI78yLhakKtY04NJvEVSHwWX/40a3VVqU5AcNw==",
+      "type": "package",
+      "path": "textflow/1.2.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net6.0/TextFlow.dll",
+        "textflow.1.2.3.nupkg.sha512",
+        "textflow.nuspec"
+      ]
+    },
     "MasterContractApplication.Domain/1.0.0": {
       "type": "project",
       "path": "../MasterContractApplication.Domain/MasterContractApplication.Domain.csproj",
@@ -5328,7 +5350,8 @@
       "Microsoft.Extensions.Configuration >= 10.0.0-preview.6.25358.103",
       "Microsoft.Extensions.Http >= 9.0.7",
       "Microsoft.Extensions.Logging >= 10.0.0-preview.6.25358.103",
-      "Microsoft.Extensions.Options.ConfigurationExtensions >= 10.0.0-preview.6.25358.103"
+      "Microsoft.Extensions.Options.ConfigurationExtensions >= 10.0.0-preview.6.25358.103",
+      "TextFlow >= 1.2.3"
     ]
   },
   "packageFolders": {
@@ -5437,6 +5460,10 @@
           "Microsoft.Extensions.Options.ConfigurationExtensions": {
             "target": "Package",
             "version": "[10.0.0-preview.6.25358.103, )"
+          },
+          "TextFlow": {
+            "target": "Package",
+            "version": "[1.2.3, )"
           }
         },
         "imports": [

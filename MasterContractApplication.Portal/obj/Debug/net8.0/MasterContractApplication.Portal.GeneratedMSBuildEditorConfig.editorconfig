@@ -42,6 +42,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Git/MasterControlApplication/MasterContractApplication/MasterContractApplication.Portal/Components/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/MasterControlApplication/MasterContractApplication/MasterContractApplication.Portal/Components/Pages/Registration.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZWdpc3RyYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Git/MasterControlApplication/MasterContractApplication/MasterContractApplication.Portal/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
