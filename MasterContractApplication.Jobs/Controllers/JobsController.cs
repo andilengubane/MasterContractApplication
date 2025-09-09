@@ -6,6 +6,5 @@ namespace MasterContractApplication.Jobs.Controllers
     public class JobsController : ControllerBase
     {
         
-
     }
 }
