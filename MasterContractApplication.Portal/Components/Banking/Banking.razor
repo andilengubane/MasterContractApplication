@@ -1,0 +1,134 @@
+﻿@page "/banking/banking"
+@using System.ComponentModel;
+@using System.ComponentModel.DataAnnotations;
+@using System.ComponentModel.DataAnnotations.Schema;
+@using MasterContractApplication.Domain.Entities
+@rendermode InteractiveServer
+
+<br />
+<br />
+<div class="row">
+    <div class="col-sm-6">
+        <Card>
+            <CardHeader>
+                Bank Account Details
+            </CardHeader>
+            <CardBody>
+                <EditForm EditContext="@editBankAccountContext" OnValidSubmit="HandleValidSubmit" novalidate>
+                    <DataAnnotationsValidator />
+                    <div class="form-group row mb-3">
+                        <label class="col-md-2 col-form-label">Account Reference: <span class="text-danger">*</span></label>
+                        <div class="col-md-10">
+                            <InputText class="form-control" @bind-Value="onlineBankAccountForm.AccountReference" />
+                            <ValidationMessage For="@(() => onlineBankAccountForm.AccountReference)" />
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label class="col-md-2 col-form-label">AVS Number: <span class="text-danger">*</span></label>
+                        <div class="col-md-10">
+                            <InputText class="form-control" @bind-Value="onlineBankAccountForm.AVSNumber" />
+                            <ValidationMessage For="@(() => onlineBankAccountForm.AVSNumber)" />
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label class="col-md-2 col-form-label">Identity / Passport Number: <span class="text-danger">*</span></label>
+                        <div class="col-md-10">
+                            <InputText class="form-control" @bind-Value="onlineBankAccountForm.IdNumber" />
+                            <ValidationMessage For="@(() => onlineBankAccountForm.IdNumber)" />
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label class="col-md-2 col-form-label">Bank Account Details: <span class="text-danger">*</span></label>
+                        <div class="col-md-10">
+                            <InputText class="form-control" @bind-Value="onlineBankAccountForm.BankAccountDetails" />
+                            <ValidationMessage For="@(() => onlineBankAccountForm.BankAccountDetails)" />
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label class="col-md-2 col-form-label">Bank Account Name: <span class="text-danger">*</span></label>
+                        <div class="col-md-10">
+                            <InputText class="form-control" @bind-Value="onlineBankAccountForm.BankAccountName" />
+                            <ValidationMessage For="@(() => onlineBankAccountForm.BankAccountName)" />
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label class="col-md-2 col-form-label">BankAccountType: <span class="text-danger">*</span></label>
+                        <div class="col-md-10">
+                            <Dropdown Color="DropdownColor.Light" Split="true" Size="DropdownSize.Small">
+                                <DropdownActionButton>Large split button</DropdownActionButton>
+                                <DropdownToggleButton />
+                                <DropdownMenu>
+                                    <DropdownItem To="#" Type="DropdownItemType.Link">Current</DropdownItem>
+                                    <DropdownItem To="#" Type="DropdownItemType.Link">Savings</DropdownItem>
+                                    <DropdownItem To="#" Type="DropdownItemType.Link">Transmission</DropdownItem>
+                                </DropdownMenu>
+                            </Dropdown>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label class="col-md-2 col-form-label">Branch Code: <span class="text-danger">*</span></label>
+                        <div class="col-md-10">
+                            <InputText class="form-control" @bind-Value="onlineBankAccountForm.BranchCode" />
+                            <ValidationMessage For="@(() => onlineBankAccountForm.BranchCode)" />
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label class="col-md-2 col-form-label">Bank Account Number: <span class="text-danger">*</span></label>
+                        <div class="col-md-10">
+                            <InputText class="form-control" @bind-Value="onlineBankAccountForm.BankAccountNumber" />
+                            <ValidationMessage For="@(() => onlineBankAccountForm.BankAccountNumber)" />
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label class="col-md-2 col-form-label">Activation: <span class="text-danger">*</span></label>
+                        <div class="col-md-10">
+                            <CheckboxInput Label="" @bind-Value="onlineBankAccountForm.IsActive" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-right">
+                            <Button Type="ButtonType.Button" Color="ButtonColor.Secondary" Class="float-end" @onclick="ResetForm">Reset</Button>
+                            <Button Type="ButtonType.Submit" Color="ButtonColor.Success" Class="float-end me-2">Submit</Button>
+                        </div>
+                    </div>
+                </EditForm>
+            </CardBody>
+        </Card>
+    </div>
+</div>
+<br />
+
+@code {
+
+    private BankAccount onlineBankAccountForm = new  BankAccount();
+    private EditContext editBankAccountContext;
+
+    protected override void OnInitialized()
+    {
+        editBankAccountContext = new EditContext(onlineBankAccountForm);
+        base.OnInitialized();
+    }
+
+    private void ResetForm()
+    {
+        onlineBankAccountForm = new();
+        editBankAccountContext = new EditContext(onlineBankAccountForm);
+    }
+
+    [Inject] ToastService _toastService { get; set; } 
+
+    public void HandleValidSubmit()
+    {
+        var toastMessage = new ToastMessage
+        (
+            type: ToastType.Success,
+            iconName: IconName.Check2All,
+            title: "Success!",
+            helpText: $"{DateTime.Now.ToLocalTime()}",
+            message: $"Hello, world! This is a toast message. DateTime: {DateTime.Now}"
+        );
+
+        _toastService.Notify(toastMessage);
+    }
+}
+

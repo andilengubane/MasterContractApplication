@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "30PV3S9MvJo1WAOlyIy8gCNAGmj2XAJd89kFnkp3vm0k/NcRPszL3MMMtmxHxRRhab0CK9pC5SuaWgmaBpjG3A==",
+  "dgSpecHash": "yoWE6kBkdGmZzBoZ2E7cI14Be1j8XOealDzsHlFDW5bX8GZe3g6QFPdpjIRV1PrXAr75n88x+UAMSMvOmrqo+g==",
   "success": true,
   "projectFilePath": "C:\\Git\\MasterControlApplication\\MasterContractApplication\\MasterContractApplication.Api\\MasterContractApplication.Api.csproj",
   "expectedPackageFiles": [
@@ -40,6 +40,9 @@
     "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\10.0.0-preview.6.25358.103\\microsoft.extensions.dependencyinjection.10.0.0-preview.6.25358.103.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.0-preview.6.25358.103\\microsoft.extensions.dependencyinjection.abstractions.10.0.0-preview.6.25358.103.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.dependencymodel\\9.0.7\\microsoft.extensions.dependencymodel.9.0.7.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.diagnostics\\9.0.7\\microsoft.extensions.diagnostics.9.0.7.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.diagnostics.abstractions\\9.0.7\\microsoft.extensions.diagnostics.abstractions.9.0.7.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.http\\9.0.7\\microsoft.extensions.http.9.0.7.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.logging\\10.0.0-preview.6.25358.103\\microsoft.extensions.logging.10.0.0-preview.6.25358.103.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.0-preview.6.25358.103\\microsoft.extensions.logging.abstractions.10.0.0-preview.6.25358.103.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\microsoft.extensions.options\\10.0.0-preview.6.25358.103\\microsoft.extensions.options.10.0.0-preview.6.25358.103.nupkg.sha512",
@@ -69,6 +72,7 @@
     "C:\\Users\\AnNgubane\\.nuget\\packages\\system.clientmodel\\1.5.1\\system.clientmodel.1.5.1.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\system.collections.immutable\\7.0.0\\system.collections.immutable.7.0.0.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\system.composition\\7.0.0\\system.composition.7.0.0.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\system.composition.attributedmodel\\7.0.0\\system.composition.attributedmodel.7.0.0.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\system.composition.convention\\7.0.0\\system.composition.convention.7.0.0.nupkg.sha512",
@@ -96,7 +100,8 @@
     "C:\\Users\\AnNgubane\\.nuget\\packages\\system.text.encodings.web\\9.0.7\\system.text.encodings.web.9.0.7.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\system.text.json\\9.0.7\\system.text.json.9.0.7.nupkg.sha512",
     "C:\\Users\\AnNgubane\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
-    "C:\\Users\\AnNgubane\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\AnNgubane\\.nuget\\packages\\textflow\\1.2.3\\textflow.1.2.3.nupkg.sha512"
   ],
   "logs": []
 }

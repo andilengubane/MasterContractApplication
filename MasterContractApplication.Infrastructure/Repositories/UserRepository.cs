@@ -15,7 +15,12 @@ namespace MasterContractApplication.Infrastructure.Repositories
 
         public async Task<User> GetUserByIdAsync(Guid Id)
         {
-            return await _masterContractApplicationContext.Users.FirstOrDefaultAsync(u=> u.Id == Id);
+            var user = await _masterContractApplicationContext.Users.FirstOrDefaultAsync(u => u.Id == Id);
+
+            if (user == null)
+                throw new KeyNotFoundException($"No user found with Id: {Id}");
+
+            return user;
         }
 
         public async Task<User> AddUserAsync(User user)
@@ -46,7 +51,7 @@ namespace MasterContractApplication.Infrastructure.Repositories
             return user;
         }
 
-        public async Task<bool> DeleteUserAsync(Guid Id)
+        public async Task<bool> RemoveUserAsync(Guid Id)
         {
             var deleteUser = await _masterContractApplicationContext.Users.SingleOrDefaultAsync(u => u.Id == Id);
             if (deleteUser is not null) {

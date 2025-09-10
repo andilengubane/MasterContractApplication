@@ -1,9 +1,8 @@
-﻿using MasterContractApplication.Application.Command;
-using MasterContractApplication.Application.Queries;
-using MasterContractApplication.Domain.Entities;
-using MediatR;
-using Microsoft.AspNetCore.Http;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using MasterContractApplication.Domain.Entities;
+using MasterContractApplication.Application.Queries.UserQueries;
+using MasterContractApplication.Application.Command.UserCommand;
 
 namespace MasterContractApplication.Api.Controllers
 {
@@ -21,8 +20,8 @@ namespace MasterContractApplication.Api.Controllers
         [HttpGet()]
         public async Task<IActionResult> GetAllUserAsync()
         {
-            var result = await sender.Send(new GetAllUsersQuery());
-            return Ok(result);
+           var result = await sender.Send(new GetAllUsersQuery());
+           return Ok(result);
         }
 
         [HttpGet("{id}")]

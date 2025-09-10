@@ -8,6 +8,6 @@ namespace MasterContractApplication.Domain.Interfaces
         Task<User> GetUserByIdAsync(Guid userId);
         Task<User> AddUserAsync(User user);
         Task<User> UpdateUserAsync(Guid Id, User user);
-        Task<bool> DeleteUserAsync(Guid Id);
+        Task<bool> RemoveUserAsync(Guid Id);
     }
 }

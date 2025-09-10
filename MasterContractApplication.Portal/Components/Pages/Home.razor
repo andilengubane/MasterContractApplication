@@ -1,6 +1,240 @@
 ﻿@page "/"
+@rendermode InteractiveServer
+@using Color = System.Drawing.Color
+<div class="row">
+    <div class="col-sm-3">
+        <Card Color="CardColor.Primary">
+            <CardBody>
+                <CardTitle>Number of users</CardTitle>
+                <CardText>90.00</CardText>
+            </CardBody>
+        </Card>
+    </div>
+    <div class="col-sm-3">
+        <Card Color="CardColor.Success">
+            <CardBody>
+                <CardTitle>Number of companies</CardTitle>
+                <CardText>20</CardText>
+            </CardBody>
+        </Card>
+    </div>
+    <div class="col-sm-3">
+        <Card Color="CardColor.Warning">
+            <CardBody>
+                <CardTitle>Allocated products</CardTitle>
+                <CardText>300</CardText>
+            </CardBody>
+        </Card>
+    </div>
+    <div class="col-sm-3">
+        <Card Color="CardColor.Danger">
+            <CardBody>
+                <CardTitle>Number of inactive users</CardTitle>
+                <CardText>200</CardText>
+            </CardBody>
+        </Card>
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-sm-6">
+        <Card>
+            <CardBody>
+                <CardTitle>Users</CardTitle>
+                <CardText><ScatterChart @ref="scatterChart" Width="900" Height="460" /></CardText>
+            </CardBody>
+        </Card>
+    </div>
+    <div class="col-sm-6">
+        <Card>
+            <CardBody>
+                <CardTitle>Commpanies</CardTitle>
+                <CardText>  <LineChart @ref="lineChart" Width="900" Height="460" /></CardText>
+            </CardBody>
+        </Card>
+    </div>
+</div>
+<br/>
+<Grid TItem="Employee1"
+      AllowSorting="true"
+      Class="table table-hover table-bordered table-striped"
+      DataProvider="EmployeesDataProvider"
+      Responsive="true">
 
-<PageTitle>Home</PageTitle>
+    <GridColumns>
+        <GridColumn TItem="Employee1" HeaderText="Id" SortKeySelector="item => item.Id">
+            @context.Id
+        </GridColumn>
 
+        <GridColumn TItem="Employee1" HeaderText="Employee Name" SortKeySelector="item => item.Name">
+            @context.Name
+        </GridColumn>
 
+        <GridColumn TItem="Employee1" HeaderText="Designation" SortKeySelector="item => item.Designation">
+            @context.Designation
+        </GridColumn>
 
+        <GridColumn TItem="Employee1" HeaderText="DOJ" SortKeySelector="item => item.DOJ">
+            @context.DOJ
+        </GridColumn>
+
+        <GridColumn TItem="Employee1" HeaderText="Active" SortKeySelector="item => item.IsActive">
+            @context.IsActive
+        </GridColumn>
+    </GridColumns>
+</Grid>
+
+@code {
+    private IEnumerable<Employee1> employees = default!;
+
+    private async Task<GridDataProviderResult<Employee1>> EmployeesDataProvider(GridDataProviderRequest<Employee1> request)
+    {
+        if (employees is null)
+            employees = GetEmployees();
+
+        return await Task.FromResult(request.ApplyTo(employees));
+    }
+
+    private IEnumerable<Employee1> GetEmployees()
+    {
+        return new List<Employee1>
+        {
+            new Employee1 { Id = 107, Name = "Alice", Designation = "AI Engineer", DOJ = DateTime.Today, IsActive = true },
+            new Employee1 { Id = 103, Name = "Bob", Designation = "Senior DevOps Engineer", DOJ = DateTime.Today, IsActive = true },
+            new Employee1 { Id = 106, Name = "John", Designation = "Data Engineer", DOJ = DateTime.Today, IsActive = true },
+            new Employee1 { Id = 104, Name = "Pop", Designation = "Associate Architect", DOJ = DateTime.Today, IsActive = false },
+            new Employee1 { Id = 108, Name = "Zayne", Designation = "Data Analyst", DOJ = DateTime.Today, IsActive = true },
+            new Employee1 { Id = 105, Name = "Ronald", Designation = "Senior Data Engineer", DOJ = DateTime.Today, IsActive = true },
+            new Employee1 { Id = 102, Name = "Line", Designation = "Architect", DOJ = DateTime.Today, IsActive = true },
+        };
+    }
+
+    public class Employee1
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Designation { get; set; } = string.Empty;
+        public DateTime DOJ { get; set; }
+        public bool IsActive { get; set; }
+    }
+
+    private ScatterChart scatterChart = default!;
+    private ScatterChartOptions scatterChartOptions = default!;
+    private ChartData chartData = default!;
+
+    private LineChart lineChart = default!;
+    private LineChartOptions lineChartOptions = default!;
+    private ChartData _chartData = default!;
+
+    private Random random = new();
+
+    protected override void OnInitialized()
+    {
+        chartData = new ChartData
+        {
+            Datasets = new()
+            {
+                GetRandomRadarChartDataset(0),
+                GetRandomRadarChartDataset(1),
+                GetRandomRadarChartDataset(2)
+            }
+        };
+        GetLineChartData();
+        scatterChartOptions = new() { };
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await scatterChart.InitializeAsync(chartData, scatterChartOptions);
+        }
+        await base.OnAfterRenderAsync(firstRender);
+
+        var secondRender = true;
+        if (secondRender)
+        {
+            await lineChart.InitializeAsync(_chartData, lineChartOptions);
+        }
+        await base.OnAfterRenderAsync(firstRender);
+    }
+
+    private ScatterChartDataset GetRandomRadarChartDataset(int recordIndex)
+    {
+        var c = ColorUtility.CategoricalTwelveColors[recordIndex].ToColor();
+
+        return new ScatterChartDataset
+        {
+            Label = $"Team {recordIndex + 1}",
+            Data = GetRandomData(),
+            BackgroundColor = c.ToRgbaString(),
+            BorderColor = c.ToRgbString(), 
+            BorderWidth = 2,
+            HoverBorderWidth = 4,
+        };
+    }
+
+    private List<ScatterChartDataPoint?> GetRandomData()
+    {
+        var data = new List<ScatterChartDataPoint?>();
+        for (var index = 0; index < 10; index++)
+        {
+            data.Add(new(random.Next(200), random.Next(200)));
+        }
+
+        return data;
+    }
+
+    protected async Task GetLineChartData()
+    {
+        var colors = ColorUtility.CategoricalTwelveColors;
+
+        var labels = new List<string> { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
+        var datasets = new List<IChartDataset>();
+
+        var dataset1 = new LineChartDataset
+        {
+            Label = "Windows",
+            Data = new List<double?> { 7265791, 5899643, 6317759, 6315641, 5338211, 8496306, 7568556, 8538933, 8274297, 8657298, 7548388, 7764845 },
+            BackgroundColor = colors[0],
+            BorderColor = colors[0],
+            BorderWidth = 2,
+            HoverBorderWidth = 4,
+        };
+        datasets.Add(dataset1);
+
+        var dataset2 = new LineChartDataset
+        {
+            Label = "macOS",
+            Data = new List<double?> { 1809499, 1816642, 2122410, 1809499, 1850793, 1846743, 1954797, 2391313, 1983430, 2469918, 2633303, 2821149 },
+            BackgroundColor = colors[1],
+            BorderColor = colors[1],
+            BorderWidth = 2,
+            HoverBorderWidth = 4,
+        };
+        datasets.Add(dataset2);
+
+        var dataset3 = new LineChartDataset
+        {
+            Label = "Other",
+            Data = new List<double?> { 1081241, 1100363, 1118136, 1073255, 1120315, 1395736, 1488788, 1489466, 1489947, 1414739, 1735811, 1820171 },
+            BackgroundColor = colors[2],
+            BorderColor = colors[2],
+            BorderWidth = 2,
+            HoverBorderWidth = 4,
+        };
+        datasets.Add(dataset3);
+
+        _chartData = new ChartData { Labels = labels, Datasets = datasets };
+
+        lineChartOptions = new();
+        lineChartOptions.Responsive = true;
+        lineChartOptions.Interaction = new Interaction { Mode = InteractionMode.Index };
+
+        lineChartOptions.Scales.X!.Title = new ChartAxesTitle { Text = "2019", Display = true };
+        lineChartOptions.Scales.Y!.Title = new ChartAxesTitle { Text = "Visitors", Display = true };
+
+        lineChartOptions.Plugins.Title!.Text = "Operating system";
+        lineChartOptions.Plugins.Title.Display = true;
+    }
+}

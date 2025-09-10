@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MasterContractApplication.Domain.Entities
 {
@@ -26,8 +21,8 @@ namespace MasterContractApplication.Domain.Entities
         public string RegNumber { get; set; } = string.Empty;
         public bool IsActived { get; set; }
         [ForeignKey("Role")]
-        public int UserRoleId { get; set; }
-        public virtual Role Role { get; set; }
+        public Guid UserRoleId { get; set; }
+        public virtual Role Role { get; set; } = new();
         public DateTime CreatedDate { get; set; }
         public DateTime ModifyDate { get; set; }
     }

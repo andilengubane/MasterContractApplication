@@ -15,4 +15,9 @@
     <ProjectReference Include="..\MasterContractApplication.Domain\MasterContractApplication.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Queries\BankQeries\BankDetailsQuery\" />
+    <Folder Include="Queries\BankAccountValidation\" />
+  </ItemGroup>
+
 </Project>
