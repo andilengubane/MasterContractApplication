@@ -47,10 +47,8 @@ namespace MasterContractApplication.Infrastructure.Repositories
             var assignInventoryUpddate = await _masterContractApplicationContext.AssignInventorys.SingleOrDefaultAsync(u => u.Id == Id);
             if (assignInventoryUpddate is not null)
             {
-                assignInventoryUpddate.CostCenterId = assignInventory.CostCenterId;
                 assignInventoryUpddate.InventoryId = assignInventory.InventoryId;
-                assignInventoryUpddate.EmployeeId = assignInventory.EmployeeId;
-                assignInventoryUpddate.InventoryTypeId = assignInventory.InventoryTypeId;
+                assignInventoryUpddate.UserId = assignInventory.UserId;
                 assignInventoryUpddate.IsActive = assignInventory.IsActive;
                 assignInventoryUpddate.DateLogged = DateTime.Today;
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MasterContractApplication.Domain.DTO
 {
-    internal class SendMessageDataDto
+    public  class SendMessageDataDto
     {
     }
 }

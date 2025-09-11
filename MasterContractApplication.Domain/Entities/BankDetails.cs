@@ -19,9 +19,5 @@ namespace MasterContractApplication.Domain.Entities
         public DateTime CreatedDate { get; set; }
         [Required]
         public DateTime ModifyDate { get; set; }
-        public BankDetails bankDetails { get; set; } = new BankDetails();
-        [ForeignKey("BankDetails")]
-        public int BankDetailsId { get; set; }
     }
-
 }

@@ -212,3 +212,4 @@ C:\Git\MasterControlApplication\MasterContractApplication\MasterContractApplicat
 C:\Git\MasterControlApplication\MasterContractApplication\MasterContractApplication.Api\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.dll
 C:\Git\MasterControlApplication\MasterContractApplication\MasterContractApplication.Api\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
 C:\Git\MasterControlApplication\MasterContractApplication\MasterContractApplication.Api\bin\Debug\net8.0\Microsoft.Extensions.Http.dll
+C:\Git\MasterControlApplication\MasterContractApplication\MasterContractApplication.Api\bin\Debug\net8.0\TextFlow.dll

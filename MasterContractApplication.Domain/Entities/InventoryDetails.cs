@@ -12,7 +12,7 @@ namespace MasterContractApplication.Domain.Entities
         public string Name { get; set; } = string.Empty;
         public string SerialNumber { get; set; } = string.Empty;
         public string Model { get; set; } = string.Empty;
-        public Nullable<bool> IsActive { get; set; }
+        public bool IsActive { get; set; }
         public bool IsAssigned { get; set; }
         public string Type { get; set; } = string.Empty;
         public Nullable<DateTime> DateLogged { get; set; }

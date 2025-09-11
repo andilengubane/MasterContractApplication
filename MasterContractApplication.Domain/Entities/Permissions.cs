@@ -9,8 +9,10 @@ namespace MasterContractApplication.Domain.Entities
         public string Name { get; set; } = string.Empty;
         [Required]
         public string Description { get; set; } = string.Empty;
+        public bool IsActive { get; set; }
         [Required]
         public Nullable<System.DateTime> Createddate { get; set; }
-        public bool IsActive { get; set; }
+        [Required]
+        public Nullable<System.DateTime> ModfyDate { get; set; }
     }
 }

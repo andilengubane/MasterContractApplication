@@ -47,13 +47,8 @@ namespace MasterContractApplication.Infrastructure.Repositories
             if (inventoryUpdate is not null)
             {
                 inventoryUpdate.InventoryTypeId = inventory.InventoryTypeId;
-                inventoryUpdate.InventoryStatusId = inventory.InventoryStatusId;
-                inventoryUpdate.EquipmentStatusId = inventory.EquipmentStatusId;
-                inventoryUpdate.Name = inventory.Name;
-                inventoryUpdate.Description = inventory.Description;
-                inventoryUpdate.SerialNumber = inventory.SerialNumber;
-                inventoryUpdate.Model = inventory.Model;
-                inventoryUpdate.Supplier = inventory.Name;
+                inventoryUpdate.InventoryDetailId = inventory.InventoryDetailId;
+                inventoryUpdate.IsActive = inventory.IsActive;
                 inventoryUpdate.OrderDate = DateTime.Today;
                 inventoryUpdate.ExpireDate = DateTime.Today;
                 inventoryUpdate.CreateDate = DateTime.Today;

@@ -8,6 +8,8 @@ namespace MasterContractApplication.Domain.Entities
     {
         [Key]
         public Guid Id { get; set; }
+        public Guid RoleId { get; set; }
+        public Guid PermissionId { get; set; }
         [Required]
         public string FisrtName { get; set; } = string.Empty;
         [Required]
@@ -20,9 +22,6 @@ namespace MasterContractApplication.Domain.Entities
         [Required]
         public string RegNumber { get; set; } = string.Empty;
         public bool IsActived { get; set; }
-        [ForeignKey("Role")]
-        public Guid UserRoleId { get; set; }
-        public virtual Role Role { get; set; } = new();
         public DateTime CreatedDate { get; set; }
         public DateTime ModifyDate { get; set; }
     }

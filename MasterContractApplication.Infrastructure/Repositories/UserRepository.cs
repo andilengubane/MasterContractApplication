@@ -42,7 +42,8 @@ namespace MasterContractApplication.Infrastructure.Repositories
                 userUpdate.Password = user.Password;
                 userUpdate.RegNumber = user.RegNumber;
                 userUpdate.IsActived = user.IsActived;
-                userUpdate.UserRoleId = user.UserRoleId;
+                userUpdate.RoleId = user.RoleId;
+                userUpdate.PermissionId = user.PermissionId;
 
                 await _masterContractApplicationContext.SaveChangesAsync();
 

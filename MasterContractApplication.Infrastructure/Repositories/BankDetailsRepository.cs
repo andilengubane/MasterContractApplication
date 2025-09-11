@@ -51,7 +51,6 @@ namespace MasterContractApplication.Infrastructure.Repositories
                 bankDetailsUpdate.Batch = bankDetails.Batch;
                 bankDetailsUpdate.BranchCode = bankDetails.BranchCode;
                 bankDetailsUpdate.BranchCode = bankDetails.BranchCode;
-                bankDetailsUpdate.BankDetailsId = bankDetails.BankDetailsId;
                 bankDetailsUpdate.CreatedDate = DateTime.Today;
                 bankDetailsUpdate.ModifyDate = bankDetails.ModifyDate;
 
