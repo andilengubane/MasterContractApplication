@@ -51,15 +51,5 @@ namespace MasterContractApplication.Infrastructure.Repositories
             }
             return user;
         }
-
-        public async Task<bool> RemoveUserAsync(Guid Id)
-        {
-            var deleteUser = await _masterContractApplicationContext.Users.SingleOrDefaultAsync(u => u.Id == Id);
-            if (deleteUser is not null) {
-                _masterContractApplicationContext.Users.Remove(deleteUser);
-                return await _masterContractApplicationContext.SaveChangesAsync() > 0;
-            }
-            return false;
-        }
     }
 }

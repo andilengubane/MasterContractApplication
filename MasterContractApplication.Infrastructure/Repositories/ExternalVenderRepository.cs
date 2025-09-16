@@ -1,10 +1,4 @@
-﻿using MasterContractApplication.Domain.Interfaces;
-using MasterContractApplication.Infrastructure.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MasterContractApplication.Infrastructure.Services;
 
 namespace MasterContractApplication.Infrastructure.Repositories
 {
